@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+lazy_static = "1.4.0"
+strum = "0.23"
+strum_macros = "0.23"
+derive_more = "0.99.17"
+maplit = "1.0.2"
