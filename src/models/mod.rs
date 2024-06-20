@@ -6,6 +6,5 @@ pub mod character_abilities;
 pub mod character_class;
 pub mod spell;
 pub mod subclass;
-pub mod point_buy_system;
 pub mod enums;
 
