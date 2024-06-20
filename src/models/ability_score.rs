@@ -1,7 +1,7 @@
 use derive_more::Constructor;
+use crate::models::point_buy_system::PointBuySystem;
 
-use crate::models::PointBuySystem;
-use crate::utils::load_filename;
+use crate::utils::env_utils::load_filename;
 
 #[derive(Constructor, Debug)]
 pub struct AbilityScore {

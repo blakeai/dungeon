@@ -1,6 +1,12 @@
 use derive_more::Constructor;
+use crate::models::attributes::Attributes;
+use crate::models::cantrip::Cantrip;
+use crate::models::character_abilities::CharacterAbilities;
+use crate::models::character_class::CharacterClass;
+use crate::models::race::Race;
+use crate::models::spell::Spell;
+use crate::models::subclass::Subclass;
 
-use crate::models::{Attributes, Cantrip, CharacterAbilities, CharacterClass, Race, Spell, Subclass};
 
 #[derive(Constructor, Debug)]
 pub struct Character {
@@ -17,7 +23,7 @@ pub struct Character {
 
 #[cfg(test)]
 mod tests {
-    use crate::models::AbilityType;
+    use crate::models::enums::abilities::Ability;
     use crate::models::attributes::tests::create_test_attributes;
     use crate::models::cantrip::tests::create_test_cantrips;
     use crate::models::character_abilities::tests::create_test_character_abilities;
@@ -51,7 +57,7 @@ mod tests {
         assert_eq!(character.character_class.name, "Wizard");
         assert_eq!(character.subclass.as_ref().unwrap().name, "Evocation");
         assert_eq!(character.level, 12);
-        assert_eq!(character.abilities.get(AbilityType::Strength).unwrap().score, 8);
+        assert_eq!(character.abilities.get(Ability::Strength).unwrap().score, 8);
         assert_eq!(character.attributes.armor_class, 20);
         assert_eq!(character.cantrips.len(), 1);
         assert_eq!(character.spells.len(), 2);

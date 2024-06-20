@@ -4,7 +4,6 @@ pub struct Cantrip {
     pub description: String,
 }
 
-
 #[cfg(test)]
 pub(super) mod tests {
     use super::*;
