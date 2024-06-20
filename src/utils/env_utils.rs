@@ -1,6 +1,4 @@
 use std::env;
-use std::path::Path;
-
 use dotenv::from_filename;
 use crate::config::environment::{Environment, EnvVar, ToKey};
 
