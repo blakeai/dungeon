@@ -1,6 +1,4 @@
-use derive_more::Constructor;
-
-#[derive(Constructor, Debug)]
+#[derive(Debug)]
 pub struct Spell {
     pub name: String,
     pub level: u8,

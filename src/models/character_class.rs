@@ -17,8 +17,8 @@ pub(super) mod tests {
 
     #[test]
     fn test_create_test_character_class() {
-        let class = create_test_character_class();
-        assert_eq!(class.name, "Wizard");
-        assert_eq!(class.hit_die, 6);
+        let character_class = create_test_character_class();
+        assert_eq!(character_class.name, "Wizard");
+        assert_eq!(character_class.hit_die, 6);
     }
 }
