@@ -23,10 +23,7 @@ impl CharacterAbilities {
     }
 
     pub fn total_cost(&self) -> i32 {
-        self.abilities.values().map(|a| {
-            println!("Ability: {:?}", a);
-            a.cost
-        }).sum()
+        self.abilities.values().map(|a| a.cost).sum()
     }
 }
 

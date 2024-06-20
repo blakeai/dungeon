@@ -1,7 +1,7 @@
 use derive_more::Constructor;
 
 use crate::models::PointBuySystem;
-use crate::utils::env_utils::load_filename;
+use crate::utils::load_filename;
 
 #[derive(Constructor, Debug)]
 pub struct AbilityScore {
@@ -16,18 +16,6 @@ lazy_static! {
     .expect("Failed to create ability score cost table");
 }
 
-fn create_cost_table() -> Result<Vec<AbilityScore>, Box<dyn std::error::Error>> {
-    let path = load_filename("POINT_BUY_CONFIG_FILENAME".to_string());
-    let point_buy_system = PointBuySystem::load_from_json(&path)?;
-    let ability_scores = point_buy_system
-        .config
-        .iter()
-        .enumerate()
-        .map(|(index, &cost)| AbilityScore::new(8 + index as i32, cost))
-        .collect();
-    return Ok(ability_scores);
-}
-
 impl AbilityScore {
     pub fn from_score(score: i32) -> Self {
         let cost = AbilityScore::get_cost(score);
@@ -40,6 +28,16 @@ impl AbilityScore {
             .map(|a| a.cost)
             .unwrap_or(0)
     }
+}
+
+fn create_cost_table() -> Result<Vec<AbilityScore>, Box<dyn std::error::Error>> {
+    let path = load_filename("POINT_BUY_CONFIG_FILENAME".to_string());
+    let point_buy_system = PointBuySystem::load_from_json(&path)?;
+    let ability_scores = point_buy_system.config
+        .iter().enumerate()
+        .map(|(index, &cost)| AbilityScore::new(8 + index as i32, cost))
+        .collect();
+    return Ok(ability_scores);
 }
 
 #[cfg(test)]
