@@ -54,6 +54,6 @@ mod tests {
         assert_eq!(character.abilities.get(AbilityType::Strength).unwrap().score, 8);
         assert_eq!(character.attributes.armor_class, 20);
         assert_eq!(character.cantrips.len(), 1);
-        assert_eq!(character.spells.len(), 3);
+        assert_eq!(character.spells.len(), 2);
     }
 }

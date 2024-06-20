@@ -7,6 +7,7 @@ pub use character_class::*;
 pub use race::*;
 pub use spell::*;
 pub use subclass::*;
+pub use point_buy_system::*;
 
 pub(crate) mod ability_score;
 pub(crate) mod ability_type;
@@ -18,4 +19,5 @@ pub(crate) mod character_class;
 pub(crate) mod race;
 pub(crate) mod spell;
 pub(crate) mod subclass;
+pub(crate) mod point_buy_system;
 
