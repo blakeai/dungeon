@@ -2,15 +2,19 @@ use std::env;
 use std::path::Path;
 
 use dotenv::from_filename;
+use crate::config::environment::{Environment, EnvVar, ToKey};
 
-pub(crate) fn load_env(variable_name: String) -> String {
-    let env_file = if cfg!(test) { ".env.test" } else { ".env" };
+pub(crate) fn getenv(env_var: EnvVar) -> String {
+    let key = env_var.to_key();
+    let env_file = env_file_name();
     from_filename(env_file).ok();
-    let value = env::var(variable_name).unwrap();
-    return value;
+    return env::var(key).unwrap();
 }
 
-pub(crate) fn load_filename(variable_name: String) -> String {
-    let filename = load_env(variable_name);
-    return Path::new(&filename).to_str().unwrap().to_string();
+fn env_file_name() -> String {
+    if cfg!(test) {
+        format!(".env.{}", Environment::Test.to_key())
+    } else {
+        ".env".to_string()
+    }
 }

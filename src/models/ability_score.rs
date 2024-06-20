@@ -1,8 +1,11 @@
-use derive_more::Constructor;
-use std::fs;
 use std::collections::HashMap;
+use std::fs;
+use std::path::Path;
 
-use crate::utils::env_utils::load_filename;
+use derive_more::Constructor;
+
+use crate::config::environment::EnvVar;
+use crate::utils::env_utils::getenv;
 
 #[derive(Constructor, Debug)]
 pub struct AbilityScore {
@@ -36,7 +39,10 @@ impl AbilityScore {
 }
 
 fn create_cost_table() -> Result<Vec<AbilityScore>, Box<dyn std::error::Error>> {
-    let path = load_filename("POINT_BUY_CONFIG_FILENAME".to_string());
+
+    let filename = getenv(EnvVar::PointBuyConfigFilename);
+    let path= Path::new(&filename).to_str().unwrap();
+    
     let raw_data = fs::read_to_string(path)?;
     let data_map: HashMap<String, i32> = serde_json::from_str(&raw_data)?;
     let point_buy_system: Vec<i32> = (1..=19)
