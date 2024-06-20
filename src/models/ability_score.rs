@@ -1,5 +1,6 @@
 use derive_more::Constructor;
-use crate::models::point_buy_system::PointBuySystem;
+use std::fs;
+use std::collections::HashMap;
 
 use crate::utils::env_utils::load_filename;
 
@@ -9,7 +10,11 @@ pub struct AbilityScore {
     pub cost: i32,
 }
 
-// Define the cost table based on the point-buy system
+#[derive(Constructor, Debug)]
+struct PointBuySystem {
+    pub config: Vec<i32>,
+}
+
 lazy_static! {
     pub(crate) static ref ABILITY_COST_TABLE: Vec<AbilityScore> =
     create_cost_table()
@@ -32,8 +37,12 @@ impl AbilityScore {
 
 fn create_cost_table() -> Result<Vec<AbilityScore>, Box<dyn std::error::Error>> {
     let path = load_filename("POINT_BUY_CONFIG_FILENAME".to_string());
-    let point_buy_system = PointBuySystem::load_from_json(&path)?;
-    let ability_scores = point_buy_system.config
+    let raw_data = fs::read_to_string(path)?;
+    let data_map: HashMap<String, i32> = serde_json::from_str(&raw_data)?;
+    let point_buy_system: Vec<i32> = (1..=19)
+        .filter_map(|i| data_map.get(&i.to_string()).cloned())
+        .collect();
+    let ability_scores = point_buy_system
         .iter().enumerate()
         .map(|(index, &cost)| AbilityScore::new(8 + index as i32, cost))
         .collect();
@@ -58,3 +67,4 @@ mod tests {
         assert_eq!(ability_score.cost, 12);
     }
 }
+
