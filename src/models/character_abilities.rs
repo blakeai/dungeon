@@ -1,9 +1,9 @@
 use std::collections::HashMap;
-use derive_more::Constructor;
+
 use crate::models::ability_score::AbilityScore;
 use crate::models::enums::abilities::Ability;
 
-#[derive(Constructor, Debug)]
+#[derive(Debug)]
 pub struct CharacterAbilities {
     pub abilities: HashMap<Ability, AbilityScore>,
 }
@@ -31,18 +31,22 @@ impl CharacterAbilities {
 #[cfg(test)]
 pub(super) mod tests {
     use maplit::hashmap;
-    use super::*;
+
     use crate::models::enums::abilities::Ability;
 
+    use super::*;
+
     pub(crate) fn create_test_character_abilities() -> CharacterAbilities {
-        CharacterAbilities::new(hashmap! {
-            Ability::Strength => AbilityScore::from_score(8),
-            Ability::Dexterity => AbilityScore::from_score(14),
-            Ability::Constitution => AbilityScore::from_score(12),
-            Ability::Intelligence => AbilityScore::from_score(15),
-            Ability::Wisdom => AbilityScore::from_score(13),
-            Ability::Charisma => AbilityScore::from_score(10),
-        })
+        CharacterAbilities {
+            abilities: hashmap! {
+                Ability::Strength => AbilityScore::from_score(8),
+                Ability::Dexterity => AbilityScore::from_score(14),
+                Ability::Constitution => AbilityScore::from_score(12),
+                Ability::Intelligence => AbilityScore::from_score(15),
+                Ability::Wisdom => AbilityScore::from_score(13),
+                Ability::Charisma => AbilityScore::from_score(10),
+            }
+        }
     }
 
     #[test]
@@ -74,16 +78,19 @@ pub(super) mod tests {
         assert_eq!(abilities.get(Ability::Strength).unwrap().score, 10);
     }
 
+
     #[test]
     fn test_character_abilities_total_cost() {
         let abilities = create_test_character_abilities();
         let actual = abilities.total_cost();
-        assert_eq!(actual, 0 + // str
-            7 + // dex
-            4 + // con
-            12 + // int
-            5 + // wis
-            2 // cha
+        // @formatter:off
+        assert_eq!(actual,
+           0  +  // str
+           7  +  // dex
+           4  +  // con
+           12 +  // int
+           5  +  // wis
+           2     // cha
         );
     }
 }

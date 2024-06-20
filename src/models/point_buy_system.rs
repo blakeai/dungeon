@@ -5,7 +5,6 @@ use derive_more::Constructor;
 
 #[derive(Constructor, Debug)]
 pub struct PointBuySystem {
-    //array of i32
     pub config: Vec<i32>,
 }
 

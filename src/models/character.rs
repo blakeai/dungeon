@@ -1,14 +1,12 @@
-use derive_more::Constructor;
 use crate::models::attributes::Attributes;
 use crate::models::cantrip::Cantrip;
 use crate::models::character_abilities::CharacterAbilities;
 use crate::models::character_class::CharacterClass;
-use crate::models::race::Race;
+use crate::models::enums::races::Race;
 use crate::models::spell::Spell;
 use crate::models::subclass::Subclass;
 
-
-#[derive(Constructor, Debug)]
+#[derive(Debug)]
 pub struct Character {
     pub name: String,
     pub race: Race,
@@ -23,11 +21,11 @@ pub struct Character {
 
 #[cfg(test)]
 mod tests {
-    use crate::models::enums::abilities::Ability;
     use crate::models::attributes::tests::create_test_attributes;
     use crate::models::cantrip::tests::create_test_cantrips;
     use crate::models::character_abilities::tests::create_test_character_abilities;
     use crate::models::character_class::tests::create_test_character_class;
+    use crate::models::enums::abilities::Ability;
     use crate::models::spell::tests::create_test_spells;
     use crate::models::subclass::tests::create_test_subclass;
 
