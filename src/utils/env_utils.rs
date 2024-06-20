@@ -18,3 +18,20 @@ fn env_file_name() -> String {
         ".env".to_string()
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_getenv() {
+        let result = getenv(EnvVar::Port);
+        assert_eq!(result, "3210");
+    }
+
+    #[test]
+    fn test_env_file_name() {
+        let result = env_file_name();
+        assert_eq!(result, ".env.test");
+    }
+}
