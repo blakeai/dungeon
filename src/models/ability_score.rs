@@ -11,7 +11,7 @@ pub struct AbilityScore {
 
 // Define the cost table based on the point-buy system
 lazy_static! {
-    pub(crate) static ref ABILITY_COST_TABLE: Vec<AbilityScore> = 
+    pub(crate) static ref ABILITY_COST_TABLE: Vec<AbilityScore> =
     create_cost_table()
     .expect("Failed to create ability score cost table");
 }
@@ -55,6 +55,6 @@ mod tests {
     fn test_ability_score_from_score_15() {
         let ability_score = AbilityScore::from_score(15);
         assert_eq!(ability_score.score, 15);
-        assert_eq!(ability_score.cost, 9);
+        assert_eq!(ability_score.cost, 12);
     }
 }

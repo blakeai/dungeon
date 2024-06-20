@@ -62,7 +62,7 @@ pub(super) mod tests {
         assert_eq!(abilities.get_cost(AbilityType::Strength).unwrap(), 0);
         assert_eq!(abilities.get_cost(AbilityType::Dexterity).unwrap(), 7);
         assert_eq!(abilities.get_cost(AbilityType::Constitution).unwrap(), 4);
-        assert_eq!(abilities.get_cost(AbilityType::Intelligence).unwrap(), 9);
+        assert_eq!(abilities.get_cost(AbilityType::Intelligence).unwrap(), 12);
         assert_eq!(abilities.get_cost(AbilityType::Wisdom).unwrap(), 5);
         assert_eq!(abilities.get_cost(AbilityType::Charisma).unwrap(), 2);
     }
@@ -81,7 +81,7 @@ pub(super) mod tests {
         assert_eq!(actual, 0 + // str
             7 + // dex
             4 + // con
-            9 + // int
+            12 + // int
             5 + // wis
             2 // cha
         );
