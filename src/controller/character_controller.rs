@@ -1,17 +1,23 @@
 use axum::{Router, routing::get, Json};
-use axum::extract::Path;
+use axum::http::StatusCode;
 use axum::response::IntoResponse;
+use tracing::log::error;
+use crate::service::class_loader::extract_classes;
 
 pub fn router() -> Router {
     Router::new()
         .route("/", get(get_characters))
-        .route("/:id", get(get_character))
 }
 
 async fn get_characters() -> impl IntoResponse {
-    Json("List of characters")
-}
-
-async fn get_character(Path(id): Path<String>) -> impl IntoResponse {
-    Json(format!("Character with id: {}", id))
+    match extract_classes() {
+        Ok(classes) => Json(classes).into_response(),
+        Err(e) => {
+            error!("Failed to extract classes: {}", e);
+            (
+                StatusCode::INTERNAL_SERVER_ERROR,
+                Json(serde_json::json!({"error": "Failed to load character classes"})),
+            ).into_response()
+        }
+    }
 }

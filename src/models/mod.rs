@@ -7,3 +7,4 @@ pub mod character_class;
 pub mod spell;
 pub mod subclass;
 pub mod enums;
+pub mod class_subclass_container;

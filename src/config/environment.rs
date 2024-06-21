@@ -12,6 +12,7 @@ pub enum Environment {
 #[derive(EnumVariantNames, EnumString, Debug)]
 pub enum EnvVar {
     PointBuyConfigFilename,
+    CharacterClassConfigFilename,
     Port,
 }
 

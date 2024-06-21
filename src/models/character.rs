@@ -34,7 +34,7 @@ mod tests {
 
     pub(crate) fn create_test_character() -> Character {
         let class = create_test_character_class();
-        let class_type = class.class_type.clone();
+        let class_type = class.name.clone();
         let subclass = create_test_subclass(class_type);
         Character {
             name: "Gandalf".to_string(),
@@ -54,7 +54,7 @@ mod tests {
         let character = create_test_character();
         assert_eq!("Gandalf", character.name);
         assert_eq!("Elf", character.race.as_ref());
-        assert_eq!(ClassType::Wizard, character.character_class.class_type);
+        assert_eq!(ClassType::Wizard, character.character_class.name);
         assert_eq!("The Fiend", character.subclass.as_ref().unwrap().name);
         assert_eq!(12, character.level);
         assert_eq!(8, character.abilities.get(Ability::Strength).unwrap().score);
