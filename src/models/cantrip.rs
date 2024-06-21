@@ -22,7 +22,7 @@ pub(super) mod tests {
         let cantrips = create_test_cantrips();
         assert_eq!(cantrips.len(), 1);
         let cantrip = &cantrips[0];
-        assert_eq!(cantrip.name, "Fire Bolt");
-        assert_eq!(cantrip.description, "A bolt of fire");
+        assert_eq!("Fire Bolt", cantrip.name);
+        assert_eq!("A bolt of fire", cantrip.description);
     }
 }

@@ -62,15 +62,15 @@ mod tests {
     #[test]
     fn test_ability_score_from_score() {
         let ability_score = AbilityScore::from_score(8);
-        assert_eq!(ability_score.score, 8);
-        assert_eq!(ability_score.cost, 0);
+        assert_eq!(8, ability_score.score);
+        assert_eq!(0, ability_score.cost);
     }
 
     #[test]
     fn test_ability_score_from_score_15() {
         let ability_score = AbilityScore::from_score(15);
-        assert_eq!(ability_score.score, 15);
-        assert_eq!(ability_score.cost, 12);
+        assert_eq!(15, ability_score.score);
+        assert_eq!(12, ability_score.cost);
     }
 }
 

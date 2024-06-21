@@ -29,8 +29,8 @@ pub(super) mod tests {
         let spells = create_test_spells();
         assert_eq!(spells.len(), 2);
         let spell = &spells[0];
-        assert_eq!(spell.name, "Magic Missile");
-        assert_eq!(spell.level, 1);
-        assert_eq!(spell.description, "A missile of magic");
+        assert_eq!("Magic Missile", spell.name);
+        assert_eq!(1, spell.level);
+        assert_eq!("A missile of magic", spell.description);
     }
 }

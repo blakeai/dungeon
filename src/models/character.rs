@@ -52,14 +52,14 @@ mod tests {
     #[test]
     fn test_create_test_character() {
         let character = create_test_character();
-        assert_eq!(character.name, "Gandalf");
-        assert_eq!(character.race.as_ref(), "Elf");
-        assert_eq!(character.character_class.class_type, ClassType::Wizard);
-        assert_eq!(character.subclass.as_ref().unwrap().name, "The Fiend");
-        assert_eq!(character.level, 12);
-        assert_eq!(character.abilities.get(Ability::Strength).unwrap().score, 8);
-        assert_eq!(character.attributes.armor_class, 20);
-        assert_eq!(character.cantrips.len(), 1);
-        assert_eq!(character.spells.len(), 2);
+        assert_eq!("Gandalf", character.name);
+        assert_eq!("Elf", character.race.as_ref());
+        assert_eq!(ClassType::Wizard, character.character_class.class_type);
+        assert_eq!("The Fiend", character.subclass.as_ref().unwrap().name);
+        assert_eq!(12, character.level);
+        assert_eq!(8, character.abilities.get(Ability::Strength).unwrap().score);
+        assert_eq!(20, character.attributes.armor_class);
+        assert_eq!(1, character.cantrips.len());
+        assert_eq!(2, character.spells.len());
     }
 }

@@ -26,12 +26,12 @@ pub(super) mod tests {
             weapon_proficiency: vec![WeaponProficiency::Simple],
             armor_proficiency: vec![ArmorProficiency::None],
             skills: hashmap! {
-                Skill::Arcana => 2,
-                Skill::History => 1,
-                Skill::Insight => 1,
+                Skill::Arcana        => 2,
+                Skill::History       => 1,
+                Skill::Insight       => 1,
                 Skill::Investigation => 1,
-                Skill::Medicine => 1,
-                Skill::Religion => 1,
+                Skill::Medicine      => 1,
+                Skill::Religion      => 1,
             },
             subclass_level: 2,
             levels: hashmap! {
@@ -66,10 +66,10 @@ pub(super) mod tests {
     fn test_create_test_character_class() {
         let character_class = create_test_character_class();
         assert_eq!(character_class.class_type, ClassType::Wizard);
-        assert_eq!(character_class.weapon_proficiency.len(), 1);
-        assert_eq!(character_class.armor_proficiency.len(), 1);
-        assert_eq!(character_class.skills.len(), 6);
-        assert_eq!(character_class.subclass_level, 2);
-        assert_eq!(character_class.levels.len(), 11);
+        assert_eq!(1, character_class.weapon_proficiency.len());
+        assert_eq!(1, character_class.armor_proficiency.len());
+        assert_eq!(6, character_class.skills.len());
+        assert_eq!(2, character_class.subclass_level);
+        assert_eq!(11, character_class.levels.len());
     }
 }

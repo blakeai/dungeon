@@ -52,30 +52,30 @@ pub(super) mod tests {
     #[test]
     fn test_create_test_character_abilities() {
         let abilities = create_test_character_abilities();
-        assert_eq!(abilities.get(Ability::Strength).unwrap().score, 8);
-        assert_eq!(abilities.get(Ability::Dexterity).unwrap().score, 14);
-        assert_eq!(abilities.get(Ability::Constitution).unwrap().score, 12);
-        assert_eq!(abilities.get(Ability::Intelligence).unwrap().score, 15);
-        assert_eq!(abilities.get(Ability::Wisdom).unwrap().score, 13);
-        assert_eq!(abilities.get(Ability::Charisma).unwrap().score, 10);
+        assert_eq!(8, abilities.get(Ability::Strength).unwrap().score);
+        assert_eq!(14, abilities.get(Ability::Dexterity).unwrap().score);
+        assert_eq!(12, abilities.get(Ability::Constitution).unwrap().score);
+        assert_eq!(15, abilities.get(Ability::Intelligence).unwrap().score);
+        assert_eq!(13, abilities.get(Ability::Wisdom).unwrap().score);
+        assert_eq!(10, abilities.get(Ability::Charisma).unwrap().score);
     }
 
     #[test]
     fn test_character_abilities_get_cost() {
         let abilities = create_test_character_abilities();
-        assert_eq!(abilities.get_cost(Ability::Strength).unwrap(), 0);
-        assert_eq!(abilities.get_cost(Ability::Dexterity).unwrap(), 7);
-        assert_eq!(abilities.get_cost(Ability::Constitution).unwrap(), 4);
-        assert_eq!(abilities.get_cost(Ability::Intelligence).unwrap(), 12);
-        assert_eq!(abilities.get_cost(Ability::Wisdom).unwrap(), 5);
-        assert_eq!(abilities.get_cost(Ability::Charisma).unwrap(), 2);
+        assert_eq!(0, abilities.get_cost(Ability::Strength).unwrap());
+        assert_eq!(7, abilities.get_cost(Ability::Dexterity).unwrap());
+        assert_eq!(4, abilities.get_cost(Ability::Constitution).unwrap());
+        assert_eq!(12, abilities.get_cost(Ability::Intelligence).unwrap());
+        assert_eq!(5, abilities.get_cost(Ability::Wisdom).unwrap());
+        assert_eq!(2, abilities.get_cost(Ability::Charisma).unwrap());
     }
 
     #[test]
     fn test_character_abilities_set() {
         let mut abilities = create_test_character_abilities();
         abilities.set(Ability::Strength, 10);
-        assert_eq!(abilities.get(Ability::Strength).unwrap().score, 10);
+        assert_eq!(10, abilities.get(Ability::Strength).unwrap().score);
     }
 
 

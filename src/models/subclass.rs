@@ -36,16 +36,16 @@ pub(super) mod tests {
         assert_eq!(subclass.name, "The Fiend");
         assert_eq!(subclass.parent_class, ClassType::Warlock);
         assert_eq!(
-            subclass.levels.get(&1).unwrap(),
-            &vec!["temp hit points on kill".to_string()]
+            &vec!["temp hit points on kill".to_string()],
+            subclass.levels.get(&1).unwrap()
         );
         assert_eq!(
-            subclass.levels.get(&6).unwrap(),
-            &vec!["add d10 to ability check".to_string()]
+            &vec!["add d10 to ability check".to_string()],
+            subclass.levels.get(&6).unwrap()
         );
         assert_eq!(
-            subclass.levels.get(&10).unwrap(),
-            &vec!["resistant to 1 damage type".to_string(), "swappable".to_string()]
+            &vec!["resistant to 1 damage type".to_string(), "swappable".to_string()],
+            subclass.levels.get(&10).unwrap()
         );
     }
 }

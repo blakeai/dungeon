@@ -20,8 +20,8 @@ pub(super) mod tests {
     #[test]
     fn test_create_test_attributes() {
         let attributes = create_test_attributes();
-        assert_eq!(attributes.armor_class, 20);
-        assert_eq!(attributes.hit_points, 54);
-        assert_eq!(attributes.speed, 30);
+        assert_eq!(20, attributes.armor_class);
+        assert_eq!(54, attributes.hit_points);
+        assert_eq!(30, attributes.speed);
     }
 }
