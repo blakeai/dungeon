@@ -6,7 +6,7 @@ use tokio::net::TcpListener;
 use tracing::Level;
 use tracing_subscriber::FmtSubscriber;
 
-use crate::config::environment::{EnvVar, ToKey};
+use crate::config::environment::{EnvVar};
 use crate::controller::character_controller;
 use crate::utils::env_utils::getenv;
 

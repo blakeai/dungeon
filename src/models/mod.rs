@@ -7,4 +7,3 @@ pub mod character_class;
 pub mod spell;
 pub mod subclass;
 pub mod enums;
-

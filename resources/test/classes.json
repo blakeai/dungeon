@@ -1,10 +1,11 @@
 {
   "barbarian": {
     "class": {
-      "weaponproficiency": "all",
-      "armorproficiency": "light,medium",
-      "savingthrows": "strength,constitution",
+      "weapon_proficiency": "all",
+      "armor_proficiency": "light,medium",
+      "saving_throws": "strength,constitution",
       "skills": "2x animalhandling,athletics,intimidation,nature,perception,survival",
+      "subclass_level": 3,
       "levels": {
         "1": "unarmored bonus,rage",
         "2": "dex save advantage,reckless attack",
@@ -47,13 +48,14 @@
   },
   "bard": {
     "class": {
-      "weaponproficiency": "simpleweapons,handcrossbows,longswords,rapiers,shortswords",
-      "armorproficiency": "light",
-      "savingthrows": "dexterity,charisma",
+      "weapon_proficiency": "simple,handcrossbows,longswords,rapiers,shortswords",
+      "armor_proficiency": "light",
+      "saving_throws": "dexterity,charisma",
       "skills": "musicalinstrument,any 3",
+      "subclass_level": 3,
       "levels": {
         "1": "bardic inspiration 3d6,level 1 spells (cha),cantrips",
-        "2": "short rest party action,profinicencies",
+        "2": "short rest party action,proficiencies",
         "3": "2 expertise,subclass,level 2 spells",
         "4": "cantrip,feat",
         "5": "level 3 spells,inspiration refreshes on short rest,d8 inspiration dice",
@@ -74,16 +76,16 @@
         }
       },
       "college of valour": {
-        "weaponproficiency": "all",
-        "armorproficiency": "medium,shields",
+        "weapon_proficiency": "all",
+        "armor_proficiency": "medium,shields",
         "levels": {
           "3": "bardic inspiration can buff damage and armor class",
           "6": "extra attack"
         }
       },
       "college of swords": {
-        "weaponproficiency": "scimitar",
-        "armorproficiency": "medium",
+        "weapon_proficiency": "scimitar",
+        "armor_proficiency": "medium",
         "levels": {
           "3": "fighting style,blade flourish attack",
           "6": "extra attack"
@@ -93,10 +95,11 @@
   },
   "cleric": {
     "class": {
-      "weaponproficiency": "simpleweapons,morningstar",
-      "armorproficiency": "light,medium,shields",
-      "savingthrows": "charisma,wisdom",
+      "weapon_proficiency": "simple,morningstar",
+      "armor_proficiency": "light,medium,shields",
+      "saving_throws": "charisma,wisdom",
       "skills": "2x history,insight,medicine,persuasion,religion",
+      "subclass_level": 1,
       "levels": {
         "1": "subclass,level 1 spells (wis),cantrips",
         "2": "turn undead,channel divinity charg,divinity spell:",
@@ -114,7 +117,7 @@
     },
     "subclasses": {
       "life": {
-        "armorproficiency": "all",
+        "armor_proficiency": "all",
         "levels": {
           "1": "healing bonus",
           "2": "aoe heal",
@@ -161,7 +164,7 @@
         }
       },
       "nature": {
-        "armorproficiency": "all",
+        "armor_proficiency": "all",
         "levels": {
           "1": "druid cantrip",
           "2": "charm animals",
@@ -173,8 +176,8 @@
         }
       },
       "tempest": {
-        "weaponproficiency": "all",
-        "armorproficiency": "all",
+        "weapon_proficiency": "all",
+        "armor_proficiency": "all",
         "levels": {
           "1": "lightning damage to attackers",
           "2": "can max lightning dmg",
@@ -186,8 +189,8 @@
         }
       },
       "war": {
-        "weaponproficiency": "all",
-        "armorproficiency": "all",
+        "weapon_proficiency": "all",
+        "armor_proficiency": "all",
         "levels": {
           "1": "war domain charges,can spend on extra attack",
           "2": "attack bonus",
@@ -203,10 +206,11 @@
   },
   "druid": {
     "class": {
-      "weaponproficiency": "clubs,daggers,javelins,maces,quarterstaves,scimitars,sickles,spears",
-      "armorproficiency": "light,medium,shields",
-      "savingthrows": "intelligence,wisdom",
+      "weapon_proficiency": "clubs,daggers,javelins,maces,quarterstaves,scimitars,sickles,spears",
+      "armor_proficiency": "light,medium,shields",
+      "saving_throws": "intelligence,wisdom",
       "skills": "2x arcana,,animalhandling,insight,medicine,nature,perception",
+      "subclass_level": 2,
       "levels": {
         "1": "level 1 spells (wis),cantrips",
         "2": "subclass,forms: cat,badger,wolf,spider",
@@ -259,10 +263,11 @@
   },
   "fighter": {
     "class": {
-      "weaponproficiency": "all",
-      "armorproficiency": "all",
-      "savingthrows": "strength,constitution",
+      "weapon_proficiency": "all",
+      "armor_proficiency": "all",
+      "saving_throws": "strength,constitution",
       "skills": "2x acrobatics,,animalhandling,athletics,history,insight,intimidation,perception,survival",
+      "subclass_level": 3,
       "levels": {
         "1": "fighting style,self heal bonus action",
         "2": "extra action point once every long rest",
@@ -303,14 +308,15 @@
   },
   "monk": {
     "class": {
-      "weaponproficiency": "simpleweapons,shortswords,other weapons do not get monk bonuses",
-      "armorproficiency": "none",
-      "savingthrows": "strength,dexterity",
+      "weapon_proficiency": "simple,shortswords,other weapons do not get monk bonuses",
+      "armor_proficiency": "none",
+      "saving_throws": "strength,dexterity",
       "skills": "2x acrobatics,athletics,history,insight,religion,stealth",
+      "subclass_level": 3,
       "levels": {
         "1": "1 ki points + 1 / level,ki bonus attack,dex wep scaling,d4 min damage,bonus unarmed attack",
         "2": "extra movement without armor,ki physical defense till next turn,ki movement/jump as bonus,ki disengage as bonus ",
-        "3": "block missile,throw it back on 0 dmg,d6 min damage",
+        "3": "block missile,throw it back on 0 dmg,d6 min damage,subclass",
         "4": "falling resistance reaction,feat",
         "5": "extra attack,ki stun ability",
         "6": "extra movement without armor/shield,unarmed attacks are non-resistable",
@@ -350,12 +356,13 @@
   },
   "paladin": {
     "class": {
-      "weaponproficiency": "all",
-      "armorproficiency": "all",
-      "savingthrows": "wisdom,charisma",
+      "weapon_proficiency": "all",
+      "armor_proficiency": "all",
+      "saving_throws": "wisdom,charisma",
       "skills": "2x athletics,insight,intimidation,medicine,persuasion,religion",
+      "subclass_level": 1,
       "levels": {
-        "1": "lay on hands heal,advantage atk vs evil,channel oath charge,channel oath spell:",
+        "1": "subclass,lay on hands heal,advantage atk vs evil,channel oath charge,channel oath spell:",
         "2": "level 1 spells (cha),divine smite - melee,fighting style",
         "3": "disease immunity",
         "4": "lay on hands charge,feat",
@@ -409,10 +416,11 @@
   },
   "ranger": {
     "class": {
-      "weaponproficiency": "all",
-      "armorproficiency": "light,medium,shields",
-      "savingthrows": "strength,dexterity",
+      "weapon_proficiency": "all",
+      "armor_proficiency": "light,medium,shields",
+      "saving_throws": "strength,dexterity",
       "skills": "3x animalhandling,athletics,insight,investigation,nature,perception,stealth,survival",
+      "subclass_level": 3,
       "levels": {
         "1": "favored enemy (proficiency and skills),natural explorer (find familiar,sleightofhand or element resistance)",
         "2": "level 1 spells (wis),fighting style",
@@ -455,10 +463,11 @@
   },
   "rogue": {
     "class": {
-      "weaponproficiency": "simpleweapons,handcrossbows,longswords,rapier,shortswords",
-      "armorproficiency": "light",
-      "savingthrows": "dexterity,intelligence",
+      "weapon_proficiency": "simple,handcrossbows,longswords,rapier,shortswords",
+      "armor_proficiency": "light",
+      "saving_throws": "dexterity,intelligence",
       "skills": "4x acrobatics,athletics,deception,insight,intimidation,investigation,perception,performance,persuasion,sleightofhand,stealth",
+      "subclass_level": 3,
       "levels": {
         "1": "sneak attack - bonus dmg vs advantage targets,expertise in 2 skills",
         "2": "bonus action hide,dash,disengage",
@@ -499,10 +508,11 @@
   },
   "sorcerer": {
     "class": {
-      "weaponproficiency": "daggers,quarterstaff,light crossbow",
-      "armorproficiency": "none",
-      "savingthrows": "constitution,charisma",
+      "weapon_proficiency": "daggers,quarterstaff,light crossbow",
+      "armor_proficiency": "none",
+      "saving_throws": "constitution,charisma",
       "skills": "2x arcana,deception,insight,intimidation,persuasion,religion",
+      "subclass_level": 1,
       "levels": {
         "1": "level 1 spells (cha),cantrips,subclass",
         "2": "choose 2 metamagic that modify spells,sorcery points to spend on metamagic,create sorcery points spell",
@@ -543,10 +553,11 @@
   },
   "warlock": {
     "class": {
-      "weaponproficiency": "simpleweapons",
-      "armorproficiency": "light",
-      "savingthrows": "wisdom,charisma",
+      "weapon_proficiency": "simple",
+      "armor_proficiency": "light",
+      "saving_throws": "wisdom,charisma",
       "skills": "2x arcana,deception,history,intimidation,investigation,nature,religion",
+      "subclass_level": 1,
       "levels": {
         "1": "level 1 spells (cha),cantrips,subclass",
         "2": "choose 2 eldritch invocations",
@@ -587,10 +598,11 @@
   },
   "wizard": {
     "class": {
-      "weaponproficiency": "daggers,quarterstaff,light crossbow",
-      "armorproficiency": "none",
-      "savingthrows": "intelligence,wisdom",
+      "weapon_proficiency": "daggers,quarterstaff,light crossbow",
+      "armor_proficiency": "none",
+      "saving_throws": "intelligence,wisdom",
       "skills": "2x arcana,history,insight,investigation,medicine,religion",
+      "subclass_level": 2,
       "levels": {
         "1": "level 1 spells (int),cantrips,arcane recovery charges to regen spell slot",
         "2": "subclass,learn subclass scrolls for cheap",
@@ -658,7 +670,7 @@
       "transmutation school": {
         "levels": {
           "2": "can make 2 alchemy solutions when combining",
-          "6": "create stone,buffs carryer with one of:,resistance to an element,darkvision,increased movement,proficiency in con saves",
+          "6": "create stone,buffs carrier with one of:,resistance to an element,darkvision,increased movement,proficiency in con saves",
           "10": "shapechanger spell,turn someone into a blue jay that can fly"
         }
       }

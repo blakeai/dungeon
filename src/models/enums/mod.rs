@@ -4,3 +4,4 @@ pub mod armor_proficiencies;
 pub mod skills;
 pub mod saving_throws;
 pub mod races;
+pub mod classes;

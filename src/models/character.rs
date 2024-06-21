@@ -26,6 +26,7 @@ mod tests {
     use crate::models::character_abilities::tests::create_test_character_abilities;
     use crate::models::character_class::tests::create_test_character_class;
     use crate::models::enums::abilities::Ability;
+    use crate::models::enums::classes::ClassType;
     use crate::models::spell::tests::create_test_spells;
     use crate::models::subclass::tests::create_test_subclass;
 
@@ -33,7 +34,8 @@ mod tests {
 
     pub(crate) fn create_test_character() -> Character {
         let class = create_test_character_class();
-        let subclass = create_test_subclass(&class);
+        let class_type = class.class_type.clone();
+        let subclass = create_test_subclass(class_type);
         Character {
             name: "Gandalf".to_string(),
             race: Race::Elf,
@@ -52,8 +54,8 @@ mod tests {
         let character = create_test_character();
         assert_eq!(character.name, "Gandalf");
         assert_eq!(character.race.as_ref(), "Elf");
-        assert_eq!(character.character_class.name, "Wizard");
-        assert_eq!(character.subclass.as_ref().unwrap().name, "Evocation");
+        assert_eq!(character.character_class.class_type, ClassType::Wizard);
+        assert_eq!(character.subclass.as_ref().unwrap().name, "The Fiend");
         assert_eq!(character.level, 12);
         assert_eq!(character.abilities.get(Ability::Strength).unwrap().score, 8);
         assert_eq!(character.attributes.armor_class, 20);
