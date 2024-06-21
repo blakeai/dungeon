@@ -7,7 +7,7 @@ use tracing::Level;
 use tracing_subscriber::FmtSubscriber;
 
 use crate::config::environment::{EnvVar};
-use crate::controller::character_controller;
+use crate::controller::class_controller;
 use crate::utils::env_utils::getenv;
 
 mod models;
@@ -21,7 +21,7 @@ async fn main() {
     setup_logging();
     
     let router = Router::new()
-        .nest("/characters", character_controller::router());
+        .nest("/classes", class_controller::router());
     
     let hostname = create_hostname();
     let listener = TcpListener::bind(hostname).await.unwrap();

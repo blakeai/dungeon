@@ -6,10 +6,10 @@ use crate::service::class_loader::extract_classes;
 
 pub fn router() -> Router {
     Router::new()
-        .route("/all", get(get_characters))
+        .route("/all", get(get_class_configurations))
 }
 
-async fn get_characters() -> impl IntoResponse {
+async fn get_class_configurations() -> impl IntoResponse {
     match extract_classes() {
         Ok(classes) => Json(classes).into_response(),
         Err(e) => {

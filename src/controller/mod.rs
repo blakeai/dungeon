@@ -1,1 +1,1 @@
-pub mod character_controller;
+pub mod class_controller;
