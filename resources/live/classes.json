@@ -10,8 +10,8 @@
         "medium"
       ],
       "saving_throws": [
-        "strength",
-        "constitution"
+        "str",
+        "con"
       ],
       "skills": [
         "animal handling",
@@ -137,8 +137,8 @@
         "light"
       ],
       "saving_throws": [
-        "dexterity",
-        "charisma"
+        "dex",
+        "cha"
       ],
       "skills": [
         "musical instrument",
@@ -263,8 +263,8 @@
         "shields"
       ],
       "saving_throws": [
-        "charisma",
-        "wisdom"
+        "cha",
+        "wis"
       ],
       "skills": [
         "history",
@@ -589,8 +589,8 @@
         "shields"
       ],
       "saving_throws": [
-        "intelligence",
-        "wisdom"
+        "int",
+        "wis"
       ],
       "skills": [
         "arcana",
@@ -761,8 +761,8 @@
         "all"
       ],
       "saving_throws": [
-        "strength",
-        "constitution"
+        "str",
+        "con"
       ],
       "skills": [
         "acrobatics",
@@ -883,8 +883,8 @@
         "none"
       ],
       "saving_throws": [
-        "strength",
-        "dexterity"
+        "str",
+        "dex"
       ],
       "skills": [
         "acrobatics",
@@ -1028,8 +1028,8 @@
         "all"
       ],
       "saving_throws": [
-        "wisdom",
-        "charisma"
+        "wis",
+        "cha"
       ],
       "skills": [
         "athletics",
@@ -1206,8 +1206,8 @@
         "shields"
       ],
       "saving_throws": [
-        "strength",
-        "dexterity"
+        "str",
+        "dex"
       ],
       "skills": [
         "animal handling",
@@ -1347,8 +1347,8 @@
         "light"
       ],
       "saving_throws": [
-        "dexterity",
-        "intelligence"
+        "dex",
+        "int"
       ],
       "skills": [
         "acrobatics",
@@ -1478,8 +1478,8 @@
         "none"
       ],
       "saving_throws": [
-        "constitution",
-        "charisma"
+        "con",
+        "cha"
       ],
       "skills": [
         "arcana",
@@ -1599,8 +1599,8 @@
         "light"
       ],
       "saving_throws": [
-        "wisdom",
-        "charisma"
+        "wis",
+        "cha"
       ],
       "skills": [
         "arcana",
@@ -1728,8 +1728,8 @@
         "none"
       ],
       "saving_throws": [
-        "intelligence",
-        "wisdom"
+        "int",
+        "wis"
       ],
       "skills": [
         "arcana",
@@ -1856,7 +1856,7 @@
             "saves vs your cantrips still deal half damage"
           ],
           "10": [
-            "intelligence mod damage bonus to evocation spells"
+            "int mod damage bonus to evocation spells"
           ]
         }
       },

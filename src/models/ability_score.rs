@@ -13,10 +13,6 @@ pub struct AbilityScore {
     pub cost: i32,
 }
 
-#[derive(Constructor, Debug)]
-struct PointBuySystem {
-    pub config: Vec<i32>,
-}
 
 lazy_static! {
     pub(crate) static ref ABILITY_COST_TABLE: Vec<AbilityScore> =
