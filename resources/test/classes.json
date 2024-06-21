@@ -2,23 +2,66 @@
   "barbarian": {
     "class": {
       "name": "barbarian",
-      "weapon_proficiency": "all",
-      "armor_proficiency": "light,medium",
-      "saving_throws": "strength,constitution",
-      "skills": "2x animal handling,athletics,intimidation,nature,perception,survival",
+      "weapon_proficiency": [
+        "all"
+      ],
+      "armor_proficiency": [
+        "light",
+        "medium"
+      ],
+      "saving_throws": [
+        "strength",
+        "constitution"
+      ],
+      "skills": [
+        "animal handling",
+        "animal handling",
+        "athletics",
+        "intimidation",
+        "nature",
+        "perception",
+        "survival"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "unarmored bonus,rage",
-        "2": "dex save advantage,reckless attack",
-        "3": "rage charge,subclass",
-        "4": "feat",
-        "5": "extra attack,bonus movement",
-        "6": "rage charge",
-        "7": "bonus initiative",
-        "8": "feat",
-        "9": "bonus crit dmg",
-        "11": "resist downed",
-        "12": "rage charge,feat"
+        "1": [
+          "unarmored bonus",
+          "rage"
+        ],
+        "2": [
+          "dex save advantage",
+          "reckless attack"
+        ],
+        "3": [
+          "rage charge",
+          "subclass"
+        ],
+        "4": [
+          "feat"
+        ],
+        "5": [
+          "extra attack",
+          "bonus movement"
+        ],
+        "6": [
+          "rage charge"
+        ],
+        "7": [
+          "bonus initiative"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "bonus crit dmg"
+        ],
+        "11": [
+          "resist downed"
+        ],
+        "12": [
+          "rage charge",
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -26,29 +69,56 @@
         "name": "wildheart",
         "parent": "barbarian",
         "levels": {
-          "3": "speak with animals,choose a beast heart bonus",
-          "6": "animal aspect (feat-ish)",
-          "8": "difficult terrain bonus",
-          "10": "animal aspect (feat-ish)"
+          "3": [
+            "speak with animals",
+            "choose a beast heart bonus"
+          ],
+          "6": [
+            "animal aspect (feat-ish)"
+          ],
+          "8": [
+            "difficult terrain bonus"
+          ],
+          "10": [
+            "animal aspect (feat-ish)"
+          ]
         }
       },
       "berserker": {
         "name": "berserker",
         "parent": "barbarian",
         "levels": {
-          "3": "bonus action attack while rage",
-          "6": "immune to calm emotions,charm and fright in rage",
-          "10": "intimidating presence: fear ability"
+          "3": [
+            "bonus action attack while rage"
+          ],
+          "6": [
+            "immune to calm emotions",
+            "charm and fright in rage"
+          ],
+          "10": [
+            "intimidating presence: fear ability"
+          ]
         }
       },
       "wild magic": {
         "name": "wild magic",
         "parent": "barbarian",
         "levels": {
-          "3": "random spell on rage,magic save proficiency",
-          "6": "buff attack or ability check,recharge level 1 spell slot,recharge level 2 spell slot",
-          "9": "recharge level 3 spell slot",
-          "10": "random spell on being hit"
+          "3": [
+            "random spell on rage",
+            "magic save proficiency"
+          ],
+          "6": [
+            "buff attack or ability check",
+            "recharge level 1 spell slot",
+            "recharge level 2 spell slot"
+          ],
+          "9": [
+            "recharge level 3 spell slot"
+          ],
+          "10": [
+            "random spell on being hit"
+          ]
         }
       }
     }
@@ -56,24 +126,74 @@
   "bard": {
     "class": {
       "name": "bard",
-      "weapon_proficiency": "simple,hand crossbows,longswords,rapiers,shortswords",
-      "armor_proficiency": "light",
-      "saving_throws": "dexterity,charisma",
-      "skills": "musical instrument,any 3",
+      "weapon_proficiency": [
+        "simple",
+        "hand crossbows",
+        "longswords",
+        "rapiers",
+        "shortswords"
+      ],
+      "armor_proficiency": [
+        "light"
+      ],
+      "saving_throws": [
+        "dexterity",
+        "charisma"
+      ],
+      "skills": [
+        "musical instrument",
+        "any",
+        "any",
+        "any"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "bardic inspiration 3d6,level 1 spells (cha),cantrips",
-        "2": "short rest party action,proficiencies",
-        "3": "2 expertise,subclass,level 2 spells",
-        "4": "cantrip,feat",
-        "5": "level 3 spells,inspiration refreshes on short rest,d8 inspiration dice",
-        "6": "charm/fear resist buff",
-        "7": "level 4 spells",
-        "8": "feat",
-        "9": "level 5 spells",
-        "10": "cantrip,2 spells from other classes (level \u2264 5),d10 inspiration dice",
-        "11": "level 6 spells",
-        "12": "feat"
+        "1": [
+          "bardic inspiration 3d6",
+          "level 1 spells (cha)",
+          "cantrips"
+        ],
+        "2": [
+          "short rest party action",
+          "proficiencies"
+        ],
+        "3": [
+          "2 expertise",
+          "subclass",
+          "level 2 spells"
+        ],
+        "4": [
+          "cantrip",
+          "feat"
+        ],
+        "5": [
+          "level 3 spells",
+          "inspiration refreshes on short rest",
+          "d8 inspiration dice"
+        ],
+        "6": [
+          "charm/fear resist buff"
+        ],
+        "7": [
+          "level 4 spells"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 5 spells"
+        ],
+        "10": [
+          "cantrip",
+          "2 spells from other classes (level \u2264 5)",
+          "d10 inspiration dice"
+        ],
+        "11": [
+          "level 6 spells"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -81,28 +201,51 @@
         "name": "college of lore",
         "parent": "bard",
         "levels": {
-          "3": "bardic inspiration can debuff enemy rolls,2x skill expertise",
-          "6": "2 spells from other classes (level \u2264 3)"
+          "3": [
+            "bardic inspiration can debuff enemy rolls",
+            "2x skill expertise"
+          ],
+          "6": [
+            "2 spells from other classes (level \u2264 3)"
+          ]
         }
       },
       "college of valour": {
         "name": "college of valour",
         "parent": "bard",
-        "weapon_proficiency": "all",
-        "armor_proficiency": "medium,shields",
+        "weapon_proficiency": [
+          "all"
+        ],
+        "armor_proficiency": [
+          "medium",
+          "shields"
+        ],
         "levels": {
-          "3": "bardic inspiration can buff damage and armor class",
-          "6": "extra attack"
+          "3": [
+            "bardic inspiration can buff damage and armor class"
+          ],
+          "6": [
+            "extra attack"
+          ]
         }
       },
       "college of swords": {
         "name": "college of swords",
         "parent": "bard",
-        "weapon_proficiency": "scimitars",
-        "armor_proficiency": "medium",
+        "weapon_proficiency": [
+          "scimitars"
+        ],
+        "armor_proficiency": [
+          "medium"
+        ],
         "levels": {
-          "3": "fighting style,blade flourish attack",
-          "6": "extra attack"
+          "3": [
+            "fighting style",
+            "blade flourish attack"
+          ],
+          "6": [
+            "extra attack"
+          ]
         }
       }
     }
@@ -110,125 +253,319 @@
   "cleric": {
     "class": {
       "name": "cleric",
-      "weapon_proficiency": "simple,morningstars",
-      "armor_proficiency": "light,medium,shields",
-      "saving_throws": "charisma,wisdom",
-      "skills": "2x history,insight,medicine,persuasion,religion",
+      "weapon_proficiency": [
+        "simple",
+        "morningstars"
+      ],
+      "armor_proficiency": [
+        "light",
+        "medium",
+        "shields"
+      ],
+      "saving_throws": [
+        "charisma",
+        "wisdom"
+      ],
+      "skills": [
+        "history",
+        "history",
+        "insight",
+        "medicine",
+        "persuasion",
+        "religion"
+      ],
       "subclass_level": 1,
       "levels": {
-        "1": "subclass,level 1 spells (wis),cantrips",
-        "2": "turn undead,channel divinity charg,divinity spell:",
-        "3": "level 2 spells",
-        "4": "cantrip,feat",
-        "5": "level 3 spells,destroy undead on turn undead",
-        "6": "divinity charge x2",
-        "7": "level 4 spells",
-        "8": "feat",
-        "9": "level 5 spells",
-        "10": "cantrip,god power",
-        "11": "level 6 spells",
-        "12": "feat"
+        "1": [
+          "subclass",
+          "level 1 spells (wis)",
+          "cantrips"
+        ],
+        "2": [
+          "turn undead",
+          "channel divinity charg",
+          "divinity spell:"
+        ],
+        "3": [
+          "level 2 spells"
+        ],
+        "4": [
+          "cantrip",
+          "feat"
+        ],
+        "5": [
+          "level 3 spells",
+          "destroy undead on turn undead"
+        ],
+        "6": [
+          "divinity charge x2"
+        ],
+        "7": [
+          "level 4 spells"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 5 spells"
+        ],
+        "10": [
+          "cantrip",
+          "god power"
+        ],
+        "11": [
+          "level 6 spells"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
       "life": {
         "name": "life",
         "parent": "cleric",
-        "armor_proficiency": "all",
+        "armor_proficiency": [
+          "all"
+        ],
         "levels": {
-          "1": "healing bonus",
-          "2": "aoe heal",
-          "3": "lesser restoration,aid",
-          "5": "revivify,beacon of hope",
-          "6": "also heal self (passive)",
-          "7": "death ward,guardian of faith",
-          "8": "divine strike: life",
-          "9": "mass cure wounds,greater restoration"
+          "1": [
+            "healing bonus"
+          ],
+          "2": [
+            "aoe heal"
+          ],
+          "3": [
+            "lesser restoration",
+            "aid"
+          ],
+          "5": [
+            "revivify",
+            "beacon of hope"
+          ],
+          "6": [
+            "also heal self (passive)"
+          ],
+          "7": [
+            "death ward",
+            "guardian of faith"
+          ],
+          "8": [
+            "divine strike: life"
+          ],
+          "9": [
+            "mass cure wounds",
+            "greater restoration"
+          ]
         }
       },
       "light": {
         "name": "light",
         "parent": "cleric",
         "levels": {
-          "1": "disadvantage reaction",
-          "2": "aoe damage",
-          "3": "flaming sphere,scorching ray",
-          "5": "daylight,fireball",
-          "6": "defensive reaction on friend",
-          "7": "wall of fire,guardian of faith",
-          "8": "cantrip dmg +wis mod",
-          "9": "flame strike,destructive wave"
+          "1": [
+            "disadvantage reaction"
+          ],
+          "2": [
+            "aoe damage"
+          ],
+          "3": [
+            "flaming sphere",
+            "scorching ray"
+          ],
+          "5": [
+            "daylight",
+            "fireball"
+          ],
+          "6": [
+            "defensive reaction on friend"
+          ],
+          "7": [
+            "wall of fire",
+            "guardian of faith"
+          ],
+          "8": [
+            "cantrip dmg +wis mod"
+          ],
+          "9": [
+            "flame strike",
+            "destructive wave"
+          ]
         }
       },
       "knowledge": {
         "name": "knowledge",
         "parent": "cleric",
         "levels": {
-          "1": "2x skill expertise",
-          "2": "ability proficiency buff",
-          "3": "calm emotions,hold person",
-          "5": "speak with dead,slow",
-          "7": "confusion,otiluke's resilient sphere",
-          "8": "cantrip dmg +wis mod",
-          "9": "dominate person,telekinesis"
+          "1": [
+            "2x skill expertise"
+          ],
+          "2": [
+            "ability proficiency buff"
+          ],
+          "3": [
+            "calm emotions",
+            "hold person"
+          ],
+          "5": [
+            "speak with dead",
+            "slow"
+          ],
+          "7": [
+            "confusion",
+            "otiluke's resilient sphere"
+          ],
+          "8": [
+            "cantrip dmg +wis mod"
+          ],
+          "9": [
+            "dominate person",
+            "telekinesis"
+          ]
         }
       },
       "trickery": {
         "name": "trickery",
         "parent": "cleric",
         "levels": {
-          "1": "stealth buff on others action",
-          "2": "summon illusion,gives advantage in melee",
-          "3": "mirror image,pass without trace",
-          "5": "bestow curse,fear",
-          "7": "polymorph,dimension door",
-          "8": "divine strike: poison ",
-          "9": "dominate person,seeming"
+          "1": [
+            "stealth buff on others action"
+          ],
+          "2": [
+            "summon illusion",
+            "gives advantage in melee"
+          ],
+          "3": [
+            "mirror image",
+            "pass without trace"
+          ],
+          "5": [
+            "bestow curse",
+            "fear"
+          ],
+          "7": [
+            "polymorph",
+            "dimension door"
+          ],
+          "8": [
+            "divine strike: poison "
+          ],
+          "9": [
+            "dominate person",
+            "seeming"
+          ]
         }
       },
       "nature": {
         "name": "nature",
         "parent": "cleric",
-        "armor_proficiency": "all",
+        "armor_proficiency": [
+          "all"
+        ],
         "levels": {
-          "1": "druid cantrip",
-          "2": "charm animals",
-          "3": "spike growth,barkskin",
-          "5": "plant growth,sleet storm",
-          "7": "dominate beast,grasping vine",
-          "8": "divine strike: elemental fury ",
-          "9": "insect plague,wall of stone"
+          "1": [
+            "druid cantrip"
+          ],
+          "2": [
+            "charm animals"
+          ],
+          "3": [
+            "spike growth",
+            "barkskin"
+          ],
+          "5": [
+            "plant growth",
+            "sleet storm"
+          ],
+          "7": [
+            "dominate beast",
+            "grasping vine"
+          ],
+          "8": [
+            "divine strike: elemental fury "
+          ],
+          "9": [
+            "insect plague",
+            "wall of stone"
+          ]
         }
       },
       "tempest": {
         "name": "tempest",
         "parent": "cleric",
-        "weapon_proficiency": "all",
-        "armor_proficiency": "all",
+        "weapon_proficiency": [
+          "all"
+        ],
+        "armor_proficiency": [
+          "all"
+        ],
         "levels": {
-          "1": "lightning damage to attackers",
-          "2": "can max lightning dmg",
-          "3": "shatter,gust of wind",
-          "5": "call lightning,sleet storm",
-          "7": "ice storm,freedom of movement",
-          "8": "divine strike: thunder ",
-          "9": "insect plague,destructive wave"
+          "1": [
+            "lightning damage to attackers"
+          ],
+          "2": [
+            "can max lightning dmg"
+          ],
+          "3": [
+            "shatter",
+            "gust of wind"
+          ],
+          "5": [
+            "call lightning",
+            "sleet storm"
+          ],
+          "7": [
+            "ice storm",
+            "freedom of movement"
+          ],
+          "8": [
+            "divine strike: thunder "
+          ],
+          "9": [
+            "insect plague",
+            "destructive wave"
+          ]
         }
       },
       "war": {
         "name": "war",
         "parent": "cleric",
-        "weapon_proficiency": "all",
-        "armor_proficiency": "all",
+        "weapon_proficiency": [
+          "all"
+        ],
+        "armor_proficiency": [
+          "all"
+        ],
         "levels": {
-          "1": "war domain charges,can spend on extra attack",
-          "2": "attack bonus",
-          "3": "magic weapon,spiritual weapon",
-          "5": "spirit guardians,crusader's mantle",
-          "6": "bonus attack to friend",
-          "7": "stoneskin,freedom of movement",
-          "8": "divine strike: weapon ",
-          "9": "flame strike,hold monster"
+          "1": [
+            "war domain charges",
+            "can spend on extra attack"
+          ],
+          "2": [
+            "attack bonus"
+          ],
+          "3": [
+            "magic weapon",
+            "spiritual weapon"
+          ],
+          "5": [
+            "spirit guardians",
+            "crusader's mantle"
+          ],
+          "6": [
+            "bonus attack to friend"
+          ],
+          "7": [
+            "stoneskin",
+            "freedom of movement"
+          ],
+          "8": [
+            "divine strike: weapon "
+          ],
+          "9": [
+            "flame strike",
+            "hold monster"
+          ]
         }
       }
     }
@@ -236,24 +573,83 @@
   "druid": {
     "class": {
       "name": "druid",
-      "weapon_proficiency": "clubs,daggers,javelins,maces,quarterstaves,scimitars,sickles,spears",
-      "armor_proficiency": "light,medium,shields",
-      "saving_throws": "intelligence,wisdom",
-      "skills": "2x arcana,,animal handling,insight,medicine,nature,perception",
+      "weapon_proficiency": [
+        "clubs",
+        "daggers",
+        "javelins",
+        "maces",
+        "quarterstaves",
+        "scimitars",
+        "sickles",
+        "spears"
+      ],
+      "armor_proficiency": [
+        "light",
+        "medium",
+        "shields"
+      ],
+      "saving_throws": [
+        "intelligence",
+        "wisdom"
+      ],
+      "skills": [
+        "arcana",
+        "arcana",
+        "animal handling",
+        "insight",
+        "medicine",
+        "nature",
+        "perception"
+      ],
       "subclass_level": 2,
       "levels": {
-        "1": "level 1 spells (wis),cantrips",
-        "2": "subclass,forms: cat,badger,wolf,spider",
-        "3": "level 2 spells",
-        "4": "cantrip,deep rothe form,feat",
-        "5": "level 3 spells,extra attack in shapeshifting",
-        "6": "panther,owlbear",
-        "7": "level 4 spells",
-        "8": "feat",
-        "9": "level 5 spells",
-        "10": "cantrip,extra attack,dino",
-        "11": "level 6 spells",
-        "12": "feat"
+        "1": [
+          "level 1 spells (wis)",
+          "cantrips"
+        ],
+        "2": [
+          "subclass",
+          "forms: cat",
+          "badger",
+          "wolf",
+          "spider"
+        ],
+        "3": [
+          "level 2 spells"
+        ],
+        "4": [
+          "cantrip",
+          "deep rothe form",
+          "feat"
+        ],
+        "5": [
+          "level 3 spells",
+          "extra attack in shapeshifting"
+        ],
+        "6": [
+          "panther",
+          "owlbear"
+        ],
+        "7": [
+          "level 4 spells"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 5 spells"
+        ],
+        "10": [
+          "cantrip",
+          "extra attack",
+          "dino"
+        ],
+        "11": [
+          "level 6 spells"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -261,38 +657,96 @@
         "name": "circle of the moon",
         "parent": "druid",
         "levels": {
-          "2": "shapeshift as bonus action,can heal in form,bear form",
-          "4": "dire raven form",
-          "6": "attacks are non-resistable",
-          "8": "sabre-tooth tiger form",
-          "10": "elemental forms"
+          "2": [
+            "shapeshift as bonus action",
+            "can heal in form",
+            "bear form"
+          ],
+          "4": [
+            "dire raven form"
+          ],
+          "6": [
+            "attacks are non-resistable"
+          ],
+          "8": [
+            "sabre-tooth tiger form"
+          ],
+          "10": [
+            "elemental forms"
+          ]
         }
       },
       "circle of the land": {
         "name": "circle of the land",
         "parent": "druid",
         "levels": {
-          "2": "natural recovery charge - used to regain spell slots,cantrip",
-          "3": "2x spells from an environment,natural recovery charge",
-          "5": "2x spells from an environment,natural recovery charge",
-          "6": "movement bonus in difficult terr.",
-          "7": "2x spells from an environment,natural recovery charge",
-          "9": "2x spells from an environment,natural recovery charge",
-          "10": "resistance to charm,frightened,poison,disease",
-          "11": "natural recovery charge"
+          "2": [
+            "natural recovery charge - used to regain spell slots",
+            "cantrip"
+          ],
+          "3": [
+            "2x spells from an environment",
+            "natural recovery charge"
+          ],
+          "5": [
+            "2x spells from an environment",
+            "natural recovery charge"
+          ],
+          "6": [
+            "movement bonus in difficult terr."
+          ],
+          "7": [
+            "2x spells from an environment",
+            "natural recovery charge"
+          ],
+          "9": [
+            "2x spells from an environment",
+            "natural recovery charge"
+          ],
+          "10": [
+            "resistance to charm",
+            "frightened",
+            "poison",
+            "disease"
+          ],
+          "11": [
+            "natural recovery charge"
+          ]
         }
       },
       "circle of the spores": {
         "name": "circle of the spores",
         "parent": "druid",
         "levels": {
-          "2": "form with temp hp and melee damage,bone chill cantrip,halo of spores reaction cantrip",
-          "3": "blindness,detect thoughts",
-          "5": "animate dead,gaseous form",
-          "6": "raise spreading zombie reaction",
-          "7": "blight,confusion",
-          "9": "cloudkill,contagion",
-          "10": "can cast bonus action,aoe spell while dmg,buff is active"
+          "2": [
+            "form with temp hp and melee damage",
+            "bone chill cantrip",
+            "halo of spores reaction cantrip"
+          ],
+          "3": [
+            "blindness",
+            "detect thoughts"
+          ],
+          "5": [
+            "animate dead",
+            "gaseous form"
+          ],
+          "6": [
+            "raise spreading zombie reaction"
+          ],
+          "7": [
+            "blight",
+            "confusion"
+          ],
+          "9": [
+            "cloudkill",
+            "contagion"
+          ],
+          "10": [
+            "can cast bonus action",
+            "aoe spell while dmg",
+            "buff is active"
+          ]
         }
       }
     }
@@ -300,22 +754,60 @@
   "fighter": {
     "class": {
       "name": "fighter",
-      "weapon_proficiency": "all",
-      "armor_proficiency": "all",
-      "saving_throws": "strength,constitution",
-      "skills": "2x acrobatics,,animal handling,athletics,history,insight,intimidation,perception,survival",
+      "weapon_proficiency": [
+        "all"
+      ],
+      "armor_proficiency": [
+        "all"
+      ],
+      "saving_throws": [
+        "strength",
+        "constitution"
+      ],
+      "skills": [
+        "acrobatics",
+        "acrobatics",
+        "animal handling",
+        "athletics",
+        "history",
+        "insight",
+        "intimidation",
+        "perception",
+        "survival"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "fighting style,self heal bonus action",
-        "2": "extra action point once every long rest",
-        "3": "subclass",
-        "4": "feat",
-        "5": "extra attack",
-        "6": "feat",
-        "8": "feat",
-        "9": "reroll saving throw /long rest",
-        "11": "2 extra attacks",
-        "12": "feat"
+        "1": [
+          "fighting style",
+          "self heal bonus action"
+        ],
+        "2": [
+          "extra action point once every long rest"
+        ],
+        "3": [
+          "subclass"
+        ],
+        "4": [
+          "feat"
+        ],
+        "5": [
+          "extra attack"
+        ],
+        "6": [
+          "feat"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "reroll saving throw /long rest"
+        ],
+        "11": [
+          "2 extra attacks"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -323,28 +815,59 @@
         "name": "battle master",
         "parent": "fighter",
         "levels": {
-          "3": "4 combat superiority dice (d8),3 manouvers",
-          "7": "1 combat superiority dice,2 manouvers",
-          "10": "superiority dice upgraded to d10",
-          "11": "2 manouvers"
+          "3": [
+            "4 combat superiority dice (d8)",
+            "3 manouvers"
+          ],
+          "7": [
+            "1 combat superiority dice",
+            "2 manouvers"
+          ],
+          "10": [
+            "superiority dice upgraded to d10"
+          ],
+          "11": [
+            "2 manouvers"
+          ]
         }
       },
       "eldritch knight": {
         "name": "eldritch knight",
         "parent": "fighter",
         "levels": {
-          "3": "level 1 spells (int),cantrips,bind weapon,can't drop it and returns when thrown",
-          "7": "level 2 spells,bonus action attack after cantrip",
-          "10": "cantrip,saving throw disadvantage,after hitting an attack"
+          "3": [
+            "level 1 spells (int)",
+            "cantrips",
+            "bind weapon",
+            "can't drop it and returns when thrown"
+          ],
+          "7": [
+            "level 2 spells",
+            "bonus action attack after cantrip"
+          ],
+          "10": [
+            "cantrip",
+            "saving throw disadvantage",
+            "after hitting an attack"
+          ]
         }
       },
       "champion": {
         "name": "champion",
         "parent": "fighter",
         "levels": {
-          "3": "crit on 1 less",
-          "7": "proficiency at str,dex,con checks,longer jump",
-          "10": "fighting style"
+          "3": [
+            "crit on 1 less"
+          ],
+          "7": [
+            "proficiency at str",
+            "dex",
+            "con checks",
+            "longer jump"
+          ],
+          "10": [
+            "fighting style"
+          ]
         }
       }
     }
@@ -352,23 +875,77 @@
   "monk": {
     "class": {
       "name": "monk",
-      "weapon_proficiency": "simple,shortswords,other weapons do not get monk bonuses",
-      "armor_proficiency": "none",
-      "saving_throws": "strength,dexterity",
-      "skills": "2x acrobatics,athletics,history,insight,religion,stealth",
+      "weapon_proficiency": [
+        "simple",
+        "shortswords"
+      ],
+      "armor_proficiency": [
+        "none"
+      ],
+      "saving_throws": [
+        "strength",
+        "dexterity"
+      ],
+      "skills": [
+        "acrobatics",
+        "acrobatics",
+        "athletics",
+        "history",
+        "insight",
+        "religion",
+        "stealth"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "1 ki points + 1 / level,ki bonus attack,dex wep scaling,d4 min damage,bonus unarmed attack",
-        "2": "extra movement without armor,ki physical defense till next turn,ki movement/jump as bonus,ki disengage as bonus ",
-        "3": "block missile,throw it back on 0 dmg,d6 min damage,subclass",
-        "4": "falling resistance reaction,feat",
-        "5": "extra attack,ki stun ability",
-        "6": "extra movement without armor/shield,unarmed attacks are non-resistable",
-        "7": "improved dex saves,auto remove charm/frightened",
-        "8": "feat",
-        "9": "extra movement without armor/shield,d8 min damage",
-        "10": "extra movement without armor/shield,poison immunity",
-        "12": "feat"
+        "1": [
+          "1 ki points + 1 / level",
+          "ki bonus attack",
+          "dex wep scaling",
+          "d4 min damage",
+          "bonus unarmed attack"
+        ],
+        "2": [
+          "extra movement without armor",
+          "ki physical defense till next turn",
+          "ki movement/jump as bonus",
+          "ki disengage as bonus "
+        ],
+        "3": [
+          "block missile",
+          "throw it back on 0 dmg",
+          "d6 min damage",
+          "subclass"
+        ],
+        "4": [
+          "falling resistance reaction",
+          "feat"
+        ],
+        "5": [
+          "extra attack",
+          "ki stun ability"
+        ],
+        "6": [
+          "extra movement without armor/shield",
+          "unarmed attacks are non-resistable"
+        ],
+        "7": [
+          "improved dex saves",
+          "auto remove charm/frightened"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "extra movement without armor/shield",
+          "d8 min damage"
+        ],
+        "10": [
+          "extra movement without armor/shield",
+          "poison immunity"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -376,30 +953,67 @@
         "name": "way of the open hand",
         "parent": "monk",
         "levels": {
-          "3": "3 ki attacks with cc",
-          "6": "unarmed deals,necrotic,psychic and radiant damage,ability to regain ki and extra bonus action",
-          "9": "attack that makes enemies resonant,ability to explode resonant",
-          "11": "immune after long,rest until attacking"
+          "3": [
+            "3 ki attacks with cc"
+          ],
+          "6": [
+            "unarmed deals",
+            "necrotic",
+            "psychic and radiant damage",
+            "ability to regain ki and extra bonus action"
+          ],
+          "9": [
+            "attack that makes enemies resonant",
+            "ability to explode resonant"
+          ],
+          "11": [
+            "immune after long",
+            "rest until attacking"
+          ]
         }
       },
       "way of shadow": {
         "name": "way of shadow",
         "parent": "monk",
         "levels": {
-          "3": "minor illusion cantrip,bonus action sneak,ki abilities:,pass without trace,darkness,darkvision,silence",
-          "5": "invisibility ability",
-          "6": "teleport to shadow ability",
-          "11": "teleporting strike"
+          "3": [
+            "minor illusion cantrip",
+            "bonus action sneak",
+            "ki abilities:",
+            "pass without trace",
+            "darkness",
+            "darkvision",
+            "silence"
+          ],
+          "5": [
+            "invisibility ability"
+          ],
+          "6": [
+            "teleport to shadow ability"
+          ],
+          "11": [
+            "teleporting strike"
+          ]
         }
       },
       "way of the four elements": {
         "name": "way of the four elements",
         "parent": "monk",
         "levels": {
-          "3": "regain ki out of combat ability,3 spells",
-          "6": "spell",
-          "9": "spell,improved spells",
-          "11": "spell"
+          "3": [
+            "regain ki out of combat ability",
+            "3 spells"
+          ],
+          "6": [
+            "spell"
+          ],
+          "9": [
+            "spell",
+            "improved spells"
+          ],
+          "11": [
+            "spell"
+          ]
         }
       }
     }
@@ -407,23 +1021,69 @@
   "paladin": {
     "class": {
       "name": "paladin",
-      "weapon_proficiency": "all",
-      "armor_proficiency": "all",
-      "saving_throws": "wisdom,charisma",
-      "skills": "2x athletics,insight,intimidation,medicine,persuasion,religion",
+      "weapon_proficiency": [
+        "all"
+      ],
+      "armor_proficiency": [
+        "all"
+      ],
+      "saving_throws": [
+        "wisdom",
+        "charisma"
+      ],
+      "skills": [
+        "athletics",
+        "athletics",
+        "insight",
+        "intimidation",
+        "medicine",
+        "persuasion",
+        "religion"
+      ],
       "subclass_level": 1,
       "levels": {
-        "1": "subclass,lay on hands heal,advantage atk vs evil,channel oath charge,channel oath spell:",
-        "2": "level 1 spells (cha),divine smite - melee,fighting style",
-        "3": "disease immunity",
-        "4": "lay on hands charge,feat",
-        "5": "level 2 spells,extra attack",
-        "6": "saving throw bonus aura",
-        "8": "feat",
-        "9": "level 3 spells",
-        "10": "lay on hands charge,frighten immune aura",
-        "11": "improved divine smite",
-        "12": "feat"
+        "1": [
+          "subclass",
+          "lay on hands heal",
+          "advantage atk vs evil",
+          "channel oath charge",
+          "channel oath spell:"
+        ],
+        "2": [
+          "level 1 spells (cha)",
+          "divine smite - melee",
+          "fighting style"
+        ],
+        "3": [
+          "disease immunity"
+        ],
+        "4": [
+          "lay on hands charge",
+          "feat"
+        ],
+        "5": [
+          "level 2 spells",
+          "extra attack"
+        ],
+        "6": [
+          "saving throw bonus aura"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 3 spells"
+        ],
+        "10": [
+          "lay on hands charge",
+          "frighten immune aura"
+        ],
+        "11": [
+          "improved divine smite"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -431,44 +1091,105 @@
         "name": "oath of ancients",
         "parent": "paladin",
         "levels": {
-          "1": "aoe heal",
-          "3": "ranged ensnaring strike - oath,turn evil - oath,speak with animals,ensnaring strike",
-          "5": "misty step,moonbeam",
-          "7": "spell damage reduction aura",
-          "9": "protection from energy,plant growth"
+          "1": [
+            "aoe heal"
+          ],
+          "3": [
+            "ranged ensnaring strike - oath",
+            "turn evil - oath",
+            "speak with animals",
+            "ensnaring strike"
+          ],
+          "5": [
+            "misty step",
+            "moonbeam"
+          ],
+          "7": [
+            "spell damage reduction aura"
+          ],
+          "9": [
+            "protection from energy",
+            "plant growth"
+          ]
         }
       },
       "oath of devotion": {
         "name": "oath of devotion",
         "parent": "paladin",
         "levels": {
-          "1": "deal radiant damage when hit buff",
-          "3": "hit chance buff - oath,turn evil - oath,protection from evil & good,sanctuary",
-          "5": "lesser restoration,silence",
-          "7": "charm immunity aura",
-          "9": "beacon of hope,remove curse"
+          "1": [
+            "deal radiant damage when hit buff"
+          ],
+          "3": [
+            "hit chance buff - oath",
+            "turn evil - oath",
+            "protection from evil & good",
+            "sanctuary"
+          ],
+          "5": [
+            "lesser restoration",
+            "silence"
+          ],
+          "7": [
+            "charm immunity aura"
+          ],
+          "9": [
+            "beacon of hope",
+            "remove curse"
+          ]
         }
       },
       "oath of vengeance": {
         "name": "oath of vengeance",
         "parent": "paladin",
         "levels": {
-          "1": "radiant damage on attack buff",
-          "3": "fear enemy - oath,advantage on target enemy - oath,bane,hunter's mark",
-          "5": "hold person,misty step",
-          "7": "movement speed after,opportunity attack",
-          "9": "protection from energy,haste"
+          "1": [
+            "radiant damage on attack buff"
+          ],
+          "3": [
+            "fear enemy - oath",
+            "advantage on target enemy - oath",
+            "bane",
+            "hunter's mark"
+          ],
+          "5": [
+            "hold person",
+            "misty step"
+          ],
+          "7": [
+            "movement speed after",
+            "opportunity attack"
+          ],
+          "9": [
+            "protection from energy",
+            "haste"
+          ]
         }
       },
       "oathbreaker": {
         "name": "oathbreaker",
         "parent": "paladin",
         "levels": {
-          "1": "dot and attack advantage spell",
-          "3": "control undead - oath,fear aoe - oath,hellish rebuke,inflict wounds",
-          "5": "crown of madness,darkness",
-          "7": "you and evil bonus damage aura",
-          "9": "bestow curse,animate dead"
+          "1": [
+            "dot and attack advantage spell"
+          ],
+          "3": [
+            "control undead - oath",
+            "fear aoe - oath",
+            "hellish rebuke",
+            "inflict wounds"
+          ],
+          "5": [
+            "crown of madness",
+            "darkness"
+          ],
+          "7": [
+            "you and evil bonus damage aura"
+          ],
+          "9": [
+            "bestow curse",
+            "animate dead"
+          ]
         }
       }
     }
@@ -476,22 +1197,68 @@
   "ranger": {
     "class": {
       "name": "ranger",
-      "weapon_proficiency": "all",
-      "armor_proficiency": "light,medium,shields",
-      "saving_throws": "strength,dexterity",
-      "skills": "3x animal handling,athletics,insight,investigation,nature,perception,stealth,survival",
+      "weapon_proficiency": [
+        "all"
+      ],
+      "armor_proficiency": [
+        "light",
+        "medium",
+        "shields"
+      ],
+      "saving_throws": [
+        "strength",
+        "dexterity"
+      ],
+      "skills": [
+        "animal handling",
+        "animal handling",
+        "animal handling",
+        "athletics",
+        "insight",
+        "investigation",
+        "nature",
+        "perception",
+        "stealth",
+        "survival"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "favored enemy (proficiency and skills),natural explorer (find familiar,sleight of hand or element resistance)",
-        "2": "level 1 spells (wis),fighting style",
-        "3": "subclass",
-        "4": "feat",
-        "5": "level 2 spells,extra attack",
-        "6": "extra choices from level 1 bonuses",
-        "8": "difficult terrain bonus,feat",
-        "9": "level 3 spells",
-        "10": "stand still sneak ability,extra choices from level 1 bonuses",
-        "12": "feat"
+        "1": [
+          "favored enemy (proficiency and skills)",
+          "natural explorer (find familiar",
+          "sleight of hand or element resistance)"
+        ],
+        "2": [
+          "level 1 spells (wis)",
+          "fighting style"
+        ],
+        "3": [
+          "subclass"
+        ],
+        "4": [
+          "feat"
+        ],
+        "5": [
+          "level 2 spells",
+          "extra attack"
+        ],
+        "6": [
+          "extra choices from level 1 bonuses"
+        ],
+        "8": [
+          "difficult terrain bonus",
+          "feat"
+        ],
+        "9": [
+          "level 3 spells"
+        ],
+        "10": [
+          "stand still sneak ability",
+          "extra choices from level 1 bonuses"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -499,30 +1266,69 @@
         "name": "beast master",
         "parent": "ranger",
         "levels": {
-          "3": "beast companion",
-          "5": "bonus armor & damage to companion",
-          "7": "companion can dash,disengage,and help",
-          "11": "companion extra attack"
+          "3": [
+            "beast companion"
+          ],
+          "5": [
+            "bonus armor & damage to companion"
+          ],
+          "7": [
+            "companion can dash",
+            "disengage",
+            "and help"
+          ],
+          "11": [
+            "companion extra attack"
+          ]
         }
       },
       "hunter": {
         "name": "hunter",
         "parent": "ranger",
         "levels": {
-          "3": "one attack feature:,attack 2 targets,reaction attack large enemies,d8 extra damage to hurt enemies",
-          "7": "one defensive feature:,opportunity attacks have disadvantage,advantage vs frightened,attack penalty for 1 turn",
-          "11": "aoe melee and ranged,attack abilities"
+          "3": [
+            "one attack feature:",
+            "attack 2 targets",
+            "reaction attack large enemies",
+            "d8 extra damage to hurt enemies"
+          ],
+          "7": [
+            "one defensive feature:",
+            "opportunity attacks have disadvantage",
+            "advantage vs frightened",
+            "attack penalty for 1 turn"
+          ],
+          "11": [
+            "aoe melee and ranged",
+            "attack abilities"
+          ]
         }
       },
       "gloom stalker": {
         "name": "gloom stalker",
         "parent": "ranger",
         "levels": {
-          "3": "first turn bonus initiative,dmg,movement,superior darkvision,bonus action stealth,invisibility action,disguise self spell",
-          "5": "misty step",
-          "7": "save proficiency int & wis",
-          "9": "fear (spell)",
-          "11": "free attack after miss"
+          "3": [
+            "first turn bonus initiative",
+            "dmg",
+            "movement",
+            "superior darkvision",
+            "bonus action stealth",
+            "invisibility action",
+            "disguise self spell"
+          ],
+          "5": [
+            "misty step"
+          ],
+          "7": [
+            "save proficiency int & wis"
+          ],
+          "9": [
+            "fear (spell)"
+          ],
+          "11": [
+            "free attack after miss"
+          ]
         }
       }
     }
@@ -530,24 +1336,83 @@
   "rogue": {
     "class": {
       "name": "rogue",
-      "weapon_proficiency": "simple,hand crossbows,longswords,rapiers,shortswords",
-      "armor_proficiency": "light",
-      "saving_throws": "dexterity,intelligence",
-      "skills": "4x acrobatics,athletics,deception,insight,intimidation,investigation,perception,performance,persuasion,sleight of hand,stealth",
+      "weapon_proficiency": [
+        "simple",
+        "hand crossbows",
+        "longswords",
+        "rapiers",
+        "shortswords"
+      ],
+      "armor_proficiency": [
+        "light"
+      ],
+      "saving_throws": [
+        "dexterity",
+        "intelligence"
+      ],
+      "skills": [
+        "acrobatics",
+        "acrobatics",
+        "acrobatics",
+        "acrobatics",
+        "athletics",
+        "deception",
+        "insight",
+        "intimidation",
+        "investigation",
+        "perception",
+        "performance",
+        "persuasion",
+        "sleight of hand",
+        "stealth"
+      ],
       "subclass_level": 3,
       "levels": {
-        "1": "sneak attack - bonus dmg vs advantage targets,expertise in 2 skills",
-        "2": "bonus action hide,dash,disengage",
-        "3": "subclass,sneak attack dmg upgrade",
-        "4": "feat",
-        "5": "half damage from attacks,sneak attack damage upgrade",
-        "6": "expertise in 2 skills",
-        "7": "dex save on spell hits,deals half or,no damage,sneak attack dmg upgrade",
-        "8": "feat",
-        "9": "sneak attack dmg upgrade",
-        "10": "feat",
-        "11": "min 10 on proficient rolls,sneak attack dmg upgrade",
-        "12": "feat"
+        "1": [
+          "sneak attack - bonus dmg vs advantage targets",
+          "expertise in 2 skills"
+        ],
+        "2": [
+          "bonus action hide",
+          "dash",
+          "disengage"
+        ],
+        "3": [
+          "subclass",
+          "sneak attack dmg upgrade"
+        ],
+        "4": [
+          "feat"
+        ],
+        "5": [
+          "half damage from attacks",
+          "sneak attack damage upgrade"
+        ],
+        "6": [
+          "expertise in 2 skills"
+        ],
+        "7": [
+          "dex save on spell hits",
+          "deals half or",
+          "no damage",
+          "sneak attack dmg upgrade"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "sneak attack dmg upgrade"
+        ],
+        "10": [
+          "feat"
+        ],
+        "11": [
+          "min 10 on proficient rolls",
+          "sneak attack dmg upgrade"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -555,26 +1420,48 @@
         "name": "thief",
         "parent": "rogue",
         "levels": {
-          "3": "extra bonus action,resistance to fall damage",
-          "9": "invisible sneak ability"
+          "3": [
+            "extra bonus action",
+            "resistance to fall damage"
+          ],
+          "9": [
+            "invisible sneak ability"
+          ]
         }
       },
       "arcane trickster": {
         "name": "arcane trickster",
         "parent": "rogue",
         "levels": {
-          "3": "level 1 spells (int),cantrips,improved mage hand",
-          "7": "level 2 spells",
-          "9": "enemies have disadvantage vs spells,you cast while sneaking",
-          "10": "cantrip"
+          "3": [
+            "level 1 spells (int)",
+            "cantrips",
+            "improved mage hand"
+          ],
+          "7": [
+            "level 2 spells"
+          ],
+          "9": [
+            "enemies have disadvantage vs spells",
+            "you cast while sneaking"
+          ],
+          "10": [
+            "cantrip"
+          ]
         }
       },
       "assassin": {
         "name": "assassin",
         "parent": "rogue",
         "levels": {
-          "3": "advantage vs enemies that haven't taken a turn,auto crit surprised enemies,restore action and bonus action on start of combat",
-          "9": "change appearance until long rest ability"
+          "3": [
+            "advantage vs enemies that haven't taken a turn",
+            "auto crit surprised enemies",
+            "restore action and bonus action on start of combat"
+          ],
+          "9": [
+            "change appearance until long rest ability"
+          ]
         }
       }
     }
@@ -582,23 +1469,69 @@
   "sorcerer": {
     "class": {
       "name": "sorcerer",
-      "weapon_proficiency": "daggers,quarterstaves,light crossbows",
-      "armor_proficiency": "none",
-      "saving_throws": "constitution,charisma",
-      "skills": "2x arcana,deception,insight,intimidation,persuasion,religion",
+      "weapon_proficiency": [
+        "daggers",
+        "quarterstaves",
+        "light crossbows"
+      ],
+      "armor_proficiency": [
+        "none"
+      ],
+      "saving_throws": [
+        "constitution",
+        "charisma"
+      ],
+      "skills": [
+        "arcana",
+        "arcana",
+        "deception",
+        "insight",
+        "intimidation",
+        "persuasion",
+        "religion"
+      ],
       "subclass_level": 1,
       "levels": {
-        "1": "level 1 spells (cha),cantrips,subclass",
-        "2": "choose 2 metamagic that modify spells,sorcery points to spend on metamagic,create sorcery points spell",
-        "3": "level 2 spells,metamagic",
-        "4": "feat,cantrip",
-        "5": "level 3 spells",
-        "7": "level 4 spells",
-        "8": "feat",
-        "9": "level 5 spells",
-        "10": "cantrip,metamagic",
-        "11": "level 6 spells",
-        "12": "feat"
+        "1": [
+          "level 1 spells (cha)",
+          "cantrips",
+          "subclass"
+        ],
+        "2": [
+          "choose 2 metamagic that modify spells",
+          "sorcery points to spend on metamagic",
+          "create sorcery points spell"
+        ],
+        "3": [
+          "level 2 spells",
+          "metamagic"
+        ],
+        "4": [
+          "feat",
+          "cantrip"
+        ],
+        "5": [
+          "level 3 spells"
+        ],
+        "7": [
+          "level 4 spells"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 5 spells"
+        ],
+        "10": [
+          "cantrip",
+          "metamagic"
+        ],
+        "11": [
+          "level 6 spells"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -606,27 +1539,52 @@
         "name": "wild magic",
         "parent": "sorcerer",
         "levels": {
-          "1": "spells may cast random effects,advantage on next roll ability",
-          "6": "reaction to add bonus or penalty to someone elses dice roll for sorc points",
-          "11": "enemy spells can trigger,wild magic close to you"
+          "1": [
+            "spells may cast random effects",
+            "advantage on next roll ability"
+          ],
+          "6": [
+            "reaction to add bonus or penalty to someone elses dice roll for sorc points"
+          ],
+          "11": [
+            "enemy spells can trigger",
+            "wild magic close to you"
+          ]
         }
       },
       "draconic bloodline": {
         "name": "draconic bloodline",
         "parent": "sorcerer",
         "levels": {
-          "1": "bonus armor,bonus health,choose ancestry for level 6",
-          "6": "gain bonus spell damage to ancestry,spend sorcery point to become resistant",
-          "11": "fly"
+          "1": [
+            "bonus armor",
+            "bonus health",
+            "choose ancestry for level 6"
+          ],
+          "6": [
+            "gain bonus spell damage to ancestry",
+            "spend sorcery point to become resistant"
+          ],
+          "11": [
+            "fly"
+          ]
         }
       },
       "storm sorcerer": {
         "name": "storm sorcerer",
         "parent": "sorcerer",
         "levels": {
-          "1": "can fly after spell for bonus action",
-          "6": "aoe after lightning or thunder spell,lightning and thunder resistance,gain 5 storm spells",
-          "11": "deal lightning to attackers might push them away"
+          "1": [
+            "can fly after spell for bonus action"
+          ],
+          "6": [
+            "aoe after lightning or thunder spell",
+            "lightning and thunder resistance",
+            "gain 5 storm spells"
+          ],
+          "11": [
+            "deal lightning to attackers might push them away"
+          ]
         }
       }
     }
@@ -634,23 +1592,77 @@
   "warlock": {
     "class": {
       "name": "warlock",
-      "weapon_proficiency": "simple",
-      "armor_proficiency": "light",
-      "saving_throws": "wisdom,charisma",
-      "skills": "2x arcana,deception,history,intimidation,investigation,nature,religion",
+      "weapon_proficiency": [
+        "simple"
+      ],
+      "armor_proficiency": [
+        "light"
+      ],
+      "saving_throws": [
+        "wisdom",
+        "charisma"
+      ],
+      "skills": [
+        "arcana",
+        "arcana",
+        "deception",
+        "history",
+        "intimidation",
+        "investigation",
+        "nature",
+        "religion"
+      ],
       "subclass_level": 1,
       "levels": {
-        "1": "level 1 spells (cha),cantrips,subclass",
-        "2": "choose 2 eldritch invocations",
-        "3": "spell slots upgrade to level 2,choose a pact boon:,summon imp,bind weapon to spell ability mod,extra cantrips",
-        "4": "feat,cantrip",
-        "5": "spell slots upgrade to level 3,1 eldritch invocation (new),pact boon bonus:,imp extra attack,extra attack,extra spells",
-        "7": "spell slots upgrade to level 4,1 eldritch invocation (new)",
-        "8": "feat",
-        "9": "spell slots upgrade to level 5,1 eldritch invocation (new)",
-        "10": "cantrip",
-        "11": "1 level 6 spell,spell slot",
-        "12": "feat,1 eldritch invocation (new)"
+        "1": [
+          "level 1 spells (cha)",
+          "cantrips",
+          "subclass"
+        ],
+        "2": [
+          "choose 2 eldritch invocations"
+        ],
+        "3": [
+          "spell slots upgrade to level 2",
+          "choose a pact boon:",
+          "summon imp",
+          "bind weapon to spell ability mod",
+          "extra cantrips"
+        ],
+        "4": [
+          "feat",
+          "cantrip"
+        ],
+        "5": [
+          "spell slots upgrade to level 3",
+          "1 eldritch invocation (new)",
+          "pact boon bonus:",
+          "imp extra attack",
+          "extra attack",
+          "extra spells"
+        ],
+        "7": [
+          "spell slots upgrade to level 4",
+          "1 eldritch invocation (new)"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "spell slots upgrade to level 5",
+          "1 eldritch invocation (new)"
+        ],
+        "10": [
+          "cantrip"
+        ],
+        "11": [
+          "1 level 6 spell",
+          "spell slot"
+        ],
+        "12": [
+          "feat",
+          "1 eldritch invocation (new)"
+        ]
       }
     },
     "subclasses": {
@@ -658,27 +1670,48 @@
         "name": "the fiend",
         "parent": "warlock",
         "levels": {
-          "1": "temp hit points on kill",
-          "6": "add d10 to ability check",
-          "10": "resistant to 1 damage type,swappable"
+          "1": [
+            "temp hit points on kill"
+          ],
+          "6": [
+            "add d10 to ability check"
+          ],
+          "10": [
+            "resistant to 1 damage type",
+            "swappable"
+          ]
         }
       },
       "the great old one": {
         "name": "the great old one",
         "parent": "warlock",
         "levels": {
-          "1": "crits can frighten nearby enemies",
-          "6": "disadvantage reaction,gain advantage if it makes enemy miss",
-          "10": "psychic resistance and reflection"
+          "1": [
+            "crits can frighten nearby enemies"
+          ],
+          "6": [
+            "disadvantage reaction",
+            "gain advantage if it makes enemy miss"
+          ],
+          "10": [
+            "psychic resistance and reflection"
+          ]
         }
       },
       "archfey": {
         "name": "archfey",
         "parent": "warlock",
         "levels": {
-          "1": "charm or frighten nearby enemies action",
-          "6": "become invisible when taking damage,can cast misty step after",
-          "10": "charm immunity"
+          "1": [
+            "charm or frighten nearby enemies action"
+          ],
+          "6": [
+            "become invisible when taking damage",
+            "can cast misty step after"
+          ],
+          "10": [
+            "charm immunity"
+          ]
         }
       }
     }
@@ -686,23 +1719,66 @@
   "wizard": {
     "class": {
       "name": "wizard",
-      "weapon_proficiency": "daggers,quarterstaves,light crossbows",
-      "armor_proficiency": "none",
-      "saving_throws": "intelligence,wisdom",
-      "skills": "2x arcana,history,insight,investigation,medicine,religion",
+      "weapon_proficiency": [
+        "daggers",
+        "quarterstaves",
+        "light crossbows"
+      ],
+      "armor_proficiency": [
+        "none"
+      ],
+      "saving_throws": [
+        "intelligence",
+        "wisdom"
+      ],
+      "skills": [
+        "arcana",
+        "arcana",
+        "history",
+        "insight",
+        "investigation",
+        "medicine",
+        "religion"
+      ],
       "subclass_level": 2,
       "levels": {
-        "1": "level 1 spells (int),cantrips,arcane recovery charges to regen spell slot",
-        "2": "subclass,learn subclass scrolls for cheap",
-        "3": "level 2 spells",
-        "4": "feat,cantrip",
-        "5": "level 3 spells",
-        "7": "level 4 spells",
-        "8": "feat",
-        "9": "level 5 spells",
-        "10": "cantrip",
-        "11": "level 6 spells",
-        "12": "feat"
+        "1": [
+          "level 1 spells (int)",
+          "cantrips",
+          "arcane recovery charges to regen spell slot"
+        ],
+        "2": [
+          "subclass",
+          "learn subclass scrolls for cheap"
+        ],
+        "3": [
+          "level 2 spells"
+        ],
+        "4": [
+          "feat",
+          "cantrip"
+        ],
+        "5": [
+          "level 3 spells"
+        ],
+        "7": [
+          "level 4 spells"
+        ],
+        "8": [
+          "feat"
+        ],
+        "9": [
+          "level 5 spells"
+        ],
+        "10": [
+          "cantrip"
+        ],
+        "11": [
+          "level 6 spells"
+        ],
+        "12": [
+          "feat"
+        ]
       }
     },
     "subclasses": {
@@ -710,72 +1786,130 @@
         "name": "abjuration school",
         "parent": "wizard",
         "levels": {
-          "2": "takes less damage,increased by casting abjuration spells and decreased by taking damage",
-          "6": "can remove level 2 shield when friend takes damage to reduce it",
-          "10": "short rest increases shield"
+          "2": [
+            "takes less damage",
+            "increased by casting abjuration spells and decreased by taking damage"
+          ],
+          "6": [
+            "can remove level 2 shield when friend takes damage to reduce it"
+          ],
+          "10": [
+            "short rest increases shield"
+          ]
         }
       },
       "conjuration school ": {
         "name": "conjuration school",
         "parent": "wizard",
         "levels": {
-          "2": "create water action",
-          "6": "teleport 9m or swap place with friend",
-          "10": "damage doesn't break conjuration concentration"
+          "2": [
+            "create water action"
+          ],
+          "6": [
+            "teleport 9m or swap place with friend"
+          ],
+          "10": [
+            "damage doesn't break conjuration concentration"
+          ]
         }
       },
       "divination school": {
         "name": "divination school",
         "parent": "wizard",
         "levels": {
-          "2": "long rest creates 2 dice that you can spend on modifying rolls near you",
-          "6": "additional dice,regain on short rest",
-          "10": "darkvision,see invisibility"
+          "2": [
+            "long rest creates 2 dice that you can spend on modifying rolls near you"
+          ],
+          "6": [
+            "additional dice",
+            "regain on short rest"
+          ],
+          "10": [
+            "darkvision",
+            "see invisibility"
+          ]
         }
       },
       "enchantment school": {
         "name": "enchantment school",
         "parent": "wizard",
         "levels": {
-          "2": "charm and incapacitate enemy action",
-          "6": "charm enemy reaction",
-          "10": "can target 2 with enchantment spells"
+          "2": [
+            "charm and incapacitate enemy action"
+          ],
+          "6": [
+            "charm enemy reaction"
+          ],
+          "10": [
+            "can target 2 with enchantment spells"
+          ]
         }
       },
       "evocation school": {
         "name": "evocation school",
         "parent": "wizard",
         "levels": {
-          "2": "friends take no damage from your evocation spells",
-          "6": "saves vs your cantrips still deal half damage",
-          "10": "intelligence mod damage bonus to evocation spells"
+          "2": [
+            "friends take no damage from your evocation spells"
+          ],
+          "6": [
+            "saves vs your cantrips still deal half damage"
+          ],
+          "10": [
+            "intelligence mod damage bonus to evocation spells"
+          ]
         }
       },
       "necromancy school ": {
         "name": "necromancy school",
         "parent": "wizard",
         "levels": {
-          "2": "regain life when killing with spells",
-          "6": "animate dead spell,animate dead upgrade",
-          "10": "immune to necrotic damage"
+          "2": [
+            "regain life when killing with spells"
+          ],
+          "6": [
+            "animate dead spell",
+            "animate dead upgrade"
+          ],
+          "10": [
+            "immune to necrotic damage"
+          ]
         }
       },
       "illusion school": {
         "name": "illusion school",
         "parent": "wizard",
         "levels": {
-          "2": "minor illusion as bonus action",
-          "6": "see invisibility spell",
-          "10": "can negate attack once every rest"
+          "2": [
+            "minor illusion as bonus action"
+          ],
+          "6": [
+            "see invisibility spell"
+          ],
+          "10": [
+            "can negate attack once every rest"
+          ]
         }
       },
       "transmutation school": {
         "name": "transmutation school",
         "parent": "wizard",
         "levels": {
-          "2": "can make 2 alchemy solutions when combining",
-          "6": "create stone,buffs carrier with one of:,resistance to an element,darkvision,increased movement,proficiency in con saves",
-          "10": "shapechanger spell,turn someone into a blue jay that can fly"
+          "2": [
+            "can make 2 alchemy solutions when combining"
+          ],
+          "6": [
+            "create stone",
+            "buffs carrier with one of:",
+            "resistance to an element",
+            "darkvision",
+            "increased movement",
+            "proficiency in con saves"
+          ],
+          "10": [
+            "shapechanger spell",
+            "turn someone into a blue jay that can fly"
+          ]
         }
       }
     }

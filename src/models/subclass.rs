@@ -3,14 +3,12 @@ use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
 
 use crate::models::enums::classes::ClassType;
-use crate::utils::deser_utils::deserialize_comma_separated_to_string_map;
 
 #[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Subclass {
     pub name: String,
     pub parent: ClassType,
-    #[serde(deserialize_with = "deserialize_comma_separated_to_string_map")]
-    pub levels: HashMap<u8, Vec<String>>,
+    pub levels: HashMap<String, Vec<String>>,
 }
 
 #[cfg(test)]
@@ -27,9 +25,9 @@ pub(super) mod tests {
             name: "The Fiend".to_string(),
             parent,
             levels: hashmap! {
-                1 => vec!["temp hit points on kill".to_string()],
-                6 => vec!["add d10 to ability check".to_string()],
-                10 => vec!["resistant to 1 damage type".to_string(),"swappable".to_string()],
+                "1".to_string() => vec!["temp hit points on kill".to_string()],
+                "6".to_string() => vec!["add d10 to ability check".to_string()],
+                "10".to_string() => vec!["resistant to 1 damage type".to_string(),"swappable".to_string()],
             },
         }
     }
@@ -42,15 +40,15 @@ pub(super) mod tests {
         assert_eq!(subclass.parent, ClassType::Warlock);
         assert_eq!(
             &vec!["temp hit points on kill".to_string()],
-            subclass.levels.get(&1).unwrap()
+            subclass.levels.get("1").unwrap()
         );
         assert_eq!(
             &vec!["add d10 to ability check".to_string()],
-            subclass.levels.get(&6).unwrap()
+            subclass.levels.get("6").unwrap()
         );
         assert_eq!(
             &vec!["resistant to 1 damage type".to_string(), "swappable".to_string()],
-            subclass.levels.get(&10).unwrap()
+            subclass.levels.get("10").unwrap()
         );
     }
 }

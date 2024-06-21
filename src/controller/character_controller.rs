@@ -6,7 +6,7 @@ use crate::service::class_loader::extract_classes;
 
 pub fn router() -> Router {
     Router::new()
-        .route("/", get(get_characters))
+        .route("/all", get(get_characters))
 }
 
 async fn get_characters() -> impl IntoResponse {

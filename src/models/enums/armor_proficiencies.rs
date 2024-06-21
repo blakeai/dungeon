@@ -1,27 +1,18 @@
-use std::str::FromStr;
 use derive_more::Display;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Hash, Eq, PartialEq, Clone, Display)]
 pub enum ArmorProficiency {
+    #[serde(alias = "all")]
     All,
+    #[serde(alias = "light")]
     Light,
+    #[serde(alias = "medium")]
     Medium,
+    #[serde(alias = "heavy")]
+    Heavy,
+    #[serde(alias = "none")]
     None,
+    #[serde(alias = "shields")]
     Shields,
-}
-
-impl FromStr for ArmorProficiency {
-    type Err = ();
-
-    fn from_str(input: &str) -> Result<ArmorProficiency, Self::Err> {
-        match input {
-            "all" => Ok(ArmorProficiency::All),
-            "light" => Ok(ArmorProficiency::Light),
-            "medium" => Ok(ArmorProficiency::Medium),
-            "none" => Ok(ArmorProficiency::None),
-            "shields" => Ok(ArmorProficiency::Shields),
-            _ => Err(()),
-        }
-    }
 }

@@ -1,49 +1,38 @@
-use std::str::FromStr;
 use derive_more::Display;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug, Hash, Eq, PartialEq, Clone, Display)]
 pub enum WeaponProficiency {
+    #[serde(alias = "all")]
     All,
+    #[serde(alias = "clubs")]
     Clubs,
+    #[serde(alias = "daggers")]
     Daggers,
+    #[serde(alias = "hand crossbows")]
     HandCrossbows,
+    #[serde(alias = "javelins")]
     Javelins,
+    #[serde(alias = "light crossbows")]
     LightCrossbows,
+    #[serde(alias = "longswords")]
     Longswords,
+    #[serde(alias = "maces")]
     Maces,
+    #[serde(alias = "morningstars")]
     Morningstars,
+    #[serde(alias = "quarterstaves")]
     Quarterstaves,
+    #[serde(alias = "rapiers")]
     Rapiers,
+    #[serde(alias = "scimitars")]
     Scimitars,
+    #[serde(alias = "shortswords")]
     Shortswords,
+    #[serde(alias = "sickles")]
     Sickles,
+    #[serde(alias = "simple")]
     Simple,
+    #[serde(alias = "spears")]
     Spears,
-}
-
-impl FromStr for WeaponProficiency {
-    type Err = ();
-
-    fn from_str(input: &str) -> Result<WeaponProficiency, Self::Err> {
-        match input {
-            "all" => Ok(WeaponProficiency::All),
-            "clubs" => Ok(WeaponProficiency::Clubs),
-            "daggers" => Ok(WeaponProficiency::Daggers),
-            "hand crossbows" => Ok(WeaponProficiency::HandCrossbows),
-            "javelins" => Ok(WeaponProficiency::Javelins),
-            "light crossbows" => Ok(WeaponProficiency::LightCrossbows),
-            "longswords" => Ok(WeaponProficiency::Longswords),
-            "maces" => Ok(WeaponProficiency::Maces),
-            "morningstars" => Ok(WeaponProficiency::Morningstars),
-            "quarterstaves" => Ok(WeaponProficiency::Quarterstaves),
-            "rapiers" => Ok(WeaponProficiency::Rapiers),
-            "scimitars" => Ok(WeaponProficiency::Scimitars),
-            "shortswords" => Ok(WeaponProficiency::Shortswords),
-            "sickles" => Ok(WeaponProficiency::Sickles),
-            "simple" => Ok(WeaponProficiency::Simple),
-            "spears" => Ok(WeaponProficiency::Spears),
-            _ => Err(()),
-        }
-    }
 }

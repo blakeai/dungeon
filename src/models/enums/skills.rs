@@ -1,57 +1,46 @@
-use std::str::FromStr;
 use derive_more::Display;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize, Debug, Hash, Eq, PartialEq, Clone, Display)]
+#[derive(Serialize, Deserialize, Debug, Hash, Eq, PartialEq, Display)]
 pub enum Skill {
+    #[serde(alias = "any")]
     Any,
+    #[serde(alias = "acrobatics")]
     Acrobatics,
+    #[serde(alias = "arcana")]
     Arcana,
+    #[serde(alias = "athletics")]
     Athletics,
+    #[serde(alias = "animal handling")]
     AnimalHandling,
+    #[serde(alias = "deception")]
     Deception,
+    #[serde(alias = "history")]
     History,
+    #[serde(alias = "insight")]
     Insight,
+    #[serde(alias = "intimidation")]
     Intimidation,
+    #[serde(alias = "investigation")]
     Investigation,
+    #[serde(alias = "medicine")]
     Medicine,
+    #[serde(alias = "musical instrument")]
     MusicalInstrument,
+    #[serde(alias = "nature")]
     Nature,
+    #[serde(alias = "perception")]
     Perception,
+    #[serde(alias = "performance")]
     Performance,
+    #[serde(alias = "persuasion")]
     Persuasion,
+    #[serde(alias = "religion")]
     Religion,
+    #[serde(alias = "sleight of hand")]
     SleightOfHand,
+    #[serde(alias = "stealth")]
     Stealth,
+    #[serde(alias = "survival")]
     Survival,
-}
-
-impl FromStr for Skill {
-    type Err = ();
-
-    fn from_str(input: &str) -> Result<Skill, Self::Err> {
-        match input {
-            "any" => Ok(Skill::Any),
-            "acrobatics" => Ok(Skill::Acrobatics),
-            "arcana" => Ok(Skill::Arcana),
-            "athletics" => Ok(Skill::Athletics),
-            "animal handling" => Ok(Skill::AnimalHandling),
-            "deception" => Ok(Skill::Deception),
-            "history" => Ok(Skill::History),
-            "insight" => Ok(Skill::Insight),
-            "intimidation" => Ok(Skill::Intimidation),
-            "investigation" => Ok(Skill::Investigation),
-            "medicine" => Ok(Skill::Medicine),
-            "musical instrument" => Ok(Skill::MusicalInstrument),
-            "nature" => Ok(Skill::Nature),
-            "perception" => Ok(Skill::Perception),
-            "performance" => Ok(Skill::Performance),
-            "persuasion" => Ok(Skill::Persuasion),
-            "religion" => Ok(Skill::Religion),
-            "sleight of hand" => Ok(Skill::SleightOfHand),
-            "stealth" => Ok(Skill::Stealth),
-            "survival" => Ok(Skill::Survival),
-            _ => Err(()),
-        }
-    }
 }

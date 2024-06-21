@@ -1,12 +1,6 @@
-use derive_more::Display;
 use serde::{Deserialize, Serialize};
-use strum_macros::{AsRefStr, EnumIter, EnumString, EnumVariantNames};
 
-#[derive(
-    Serialize, Deserialize, Debug, Copy, Clone,
-    EnumIter, EnumString, EnumVariantNames, AsRefStr,
-    PartialEq, Eq, Hash, Display
-)]
+#[derive(Serialize, Deserialize, Debug, Hash, Eq, PartialEq, Clone)]
 pub enum ClassType {
     #[serde(alias = "barbarian")]
     Barbarian,
