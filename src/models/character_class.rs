@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
+use crate::models::enums::abilities::Ability;
 
 use crate::models::enums::armor_proficiencies::ArmorProficiency;
 use crate::models::enums::classes::ClassType;
@@ -13,6 +14,7 @@ pub struct CharacterClass {
     pub subclass_level: u8,
     pub weapon_proficiency: Vec<WeaponProficiency>,
     pub armor_proficiency: Vec<ArmorProficiency>,
+    pub saving_throws: Vec<Ability>,
     pub skills: Vec<Skill>,
     pub levels: HashMap<String, Vec<String>>,
 }
@@ -28,6 +30,7 @@ pub(super) mod tests {
             name: ClassType::Wizard,
             weapon_proficiency: vec![WeaponProficiency::Simple],
             armor_proficiency: vec![ArmorProficiency::None],
+            saving_throws: vec![Ability::Intelligence, Ability::Wisdom],
             skills: vec![
                 Skill::Arcana,
                 Skill::Arcana,
@@ -72,7 +75,8 @@ pub(super) mod tests {
         assert_eq!(character_class.name, ClassType::Wizard);
         assert_eq!(1, character_class.weapon_proficiency.len());
         assert_eq!(1, character_class.armor_proficiency.len());
-        assert_eq!(6, character_class.skills.len());
+        assert_eq!(2, character_class.saving_throws.len());
+        assert_eq!(7, character_class.skills.len());
         assert_eq!(2, character_class.subclass_level);
         assert_eq!(11, character_class.levels.len());
     }
