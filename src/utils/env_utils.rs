@@ -1,20 +1,21 @@
 use std::env;
 use dotenv::from_filename;
-use crate::config::environment::{Environment, EnvVar, ToKey};
+use crate::config::environment::{EnvVar, ToKey};
 
 pub(crate) fn getenv(env_var: EnvVar) -> String {
     let key = env_var.to_key();
     let env_file = env_file_name();
     from_filename(env_file).ok();
-    return env::var(key).unwrap();
+    return env::var(&key).expect(&format!("env {} not found in .env file", &key));
 }
 
 fn env_file_name() -> String {
-    if cfg!(test) {
-        format!(".env.{}", Environment::Test.to_key())
+    let env_file = if cfg!(test) {
+        ".env.test"
     } else {
-        ".env".to_string()
-    }
+        ".env"
+    };
+    return env_file.to_string();
 }
 
 #[cfg(test)]

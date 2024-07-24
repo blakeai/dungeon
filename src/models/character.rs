@@ -6,6 +6,7 @@ use crate::models::enums::races::Race;
 use crate::models::spell::Spell;
 use crate::models::subclass::Subclass;
 
+#[allow(dead_code)]
 #[derive(Debug)]
 pub struct Character {
     pub name: String,

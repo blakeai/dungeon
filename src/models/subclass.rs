@@ -15,7 +15,6 @@ pub struct Subclass {
 pub(super) mod tests {
     use maplit::hashmap;
 
-    use crate::models::character_class::tests::create_test_character_class;
     use crate::models::enums::classes::ClassType;
 
     use super::*;
@@ -34,7 +33,6 @@ pub(super) mod tests {
 
     #[test]
     fn test_create_test_subclass() {
-        let parent_class = create_test_character_class();
         let subclass = create_test_subclass(ClassType::Warlock);
         assert_eq!(subclass.name, "The Fiend");
         assert_eq!(subclass.parent, ClassType::Warlock);

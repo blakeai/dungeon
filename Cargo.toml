@@ -5,8 +5,8 @@ edition = "2021"
 
 [dependencies]
 lazy_static = "1.4.0"
-strum = "0.23"
-strum_macros = "0.23"
+strum = "0.26.3"
+strum_macros = "0.26.4"
 derive_more = "0.99.17"
 maplit = "1.0.2"
 serde_json = "1.0.117"
@@ -17,4 +17,4 @@ axum = "0.7.5"
 tokio = { version = "1", features = ["full"] }
 tracing-subscriber = "0.3.18"
 tracing = "0.1.40"
-heck = "0.4"
+heck = "0.5.0"

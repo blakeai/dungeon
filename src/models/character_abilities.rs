@@ -8,6 +8,7 @@ pub struct CharacterAbilities {
     pub abilities: HashMap<Ability, AbilityScore>,
 }
 
+#[allow(dead_code)]
 impl CharacterAbilities {
     pub fn get(&self, ability: Ability) -> Option<&AbilityScore> {
         self.abilities.get(&ability)

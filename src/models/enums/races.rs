@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
-use strum_macros::{AsRefStr, EnumIter, EnumString, EnumVariantNames};
+use strum_macros::{AsRefStr, EnumIter, EnumString, VariantNames};
 
-#[derive(Serialize, Deserialize, Debug, EnumIter, EnumString, EnumVariantNames, AsRefStr)]
+#[derive(Serialize, Deserialize, Debug, EnumIter, EnumString, VariantNames, AsRefStr)]
 pub enum Race {
     #[serde(alias = "elf")]         Elf,
     #[serde(alias = "dwarf")]       Dwarf,

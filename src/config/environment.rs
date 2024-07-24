@@ -1,16 +1,10 @@
 use heck::ToShoutySnakeCase;
-use strum_macros::{EnumString, EnumVariantNames};
-
-// lowercase
-#[derive(EnumVariantNames, EnumString, Debug)]
-pub enum Environment {
-    Test,
-    Live,
-}
+use strum_macros::{EnumString, VariantNames};
 
 // SHOUTY_UPPER_SNAKE_CASE
-#[derive(EnumVariantNames, EnumString, Debug)]
+#[derive(VariantNames, EnumString, Debug)]
 pub enum EnvVar {
+    LogLevel,
     PointBuyConfigFilename,
     CharacterClassConfigFilename,
     Port,
@@ -18,12 +12,6 @@ pub enum EnvVar {
 
 pub trait ToKey {
     fn to_key(&self) -> String;
-}
-
-impl ToKey for Environment {
-    fn to_key(&self) -> String {
-        format!("{:?}", self).to_lowercase()
-    }
 }
 
 impl ToKey for EnvVar {
